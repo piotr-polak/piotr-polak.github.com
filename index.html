@@ -49,7 +49,7 @@
 			font-size: 1.6em;
 			margin-top: 2em;
 		}
-		.head h2 {
+		#head h2 {
 			font-size: 1.4em;
 		}
 		h3 {
@@ -67,14 +67,14 @@
 		a:hover {
 			color: #cb4b16;
 		}
-		.head {
+		#head {
 			margin: auto;
 			padding-bottom: 1em;
 			text-align: center;
 			width: 77%;
 			border-bottom: 5px solid #ccc;
 		}
-		.head img {
+		#head img {
 			vertical-align: middle;
 		}
 		.about {
@@ -95,14 +95,14 @@
 			padding: 0;
 			margin-left: auto;
 		}
-		.foot {
+		#foot {
 			margin: auto;
 			text-align: center;
 			width: 70%;
 			margin-top: 3em;
 			border-top: 5px solid #ccc;
 		}
-		.foot img {
+		#foot img {
 			vertical-align: middle;
 		}
 	</style>
@@ -112,7 +112,8 @@
 	<div class="content">
 
 		<!-- Head -->
-		<div class="head">
+
+		<div id="head">
 			<a href="http://piotrpolak.com"><img class="home" src="./img/pp_photo.png" alt="Piotr Polak" width="90"></a>
 
 			<h1>Piotr Polak</h1> 
@@ -126,94 +127,96 @@
 
 		<!-- Main -->
 
-		<h2>Expertise</h2>
+		<div id="main">
+			<h2>Expertise</h2>
 
-		<p>More than 21 years of experience in system and embedded device security, development of products for global markets and standardization:</p> 
-		<ul>
-			<li>Secure product development</li>
-			<li>Security related standardization</li>
-			<li>Product and process security certification</li>
-		</ul>
-		<p>Having being involved in the ongoing work on the Radio Equipment Directive and Cyber Resilience Act related specifications at <a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/">CENELEC</a> and Connectivity Standards Alliance <a href="https://csa-iot.org/newsroom/global-approach-to-iot-cybersecurity/">Product Security Certification Program</a>, I can bring important insights that can help guide product development to improve security and achieve compliance.</p>
-		<p>My expertise includes:</p>
-		<ul>
-			<li>Operational (OT) and Information (IT) technology product security</li>
-			<li>Integration between OT and IT</li>
-			<li>Communication protocols: <a href="https://csa-iot.org/all-solutions/zigbee/">Zigbee</a>, <a href="https://csa-iot.org/all-solutions/matter/">Matter</a>, <a href="https://www.itu.int/hub/2020/09/why-signify-builds-lifi-products-to-itu-standards/">LiFi</a>, WiFi, Bluetooth, Ethernet, ...</li>
-			<li>Smart cards, secure elements and Trusted Platform Modules (TPM) based solutions</li>
-			<li>Trusted Execution Environment (TEE) based solutions</li>
-			<li>Security certification</li>
-		</ul>
-		<p>Actively following EU driven cybersecurity regulations and monitoring cybersecurity regulations in other regions.</p>
+			<p>More than 21 years of experience in system and embedded device security, development of products for global markets and standardization:</p> 
+			<ul>
+				<li>Secure product development</li>
+				<li>Security related standardization</li>
+				<li>Product and process security certification</li>
+			</ul>
+			<p>Having being involved in the ongoing work on the Radio Equipment Directive and Cyber Resilience Act related specifications at <a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/">CENELEC</a> and Connectivity Standards Alliance <a href="https://csa-iot.org/newsroom/global-approach-to-iot-cybersecurity/">Product Security Certification Program</a>, I can bring important insights that can help guide product development to improve security and achieve compliance.</p>
+			<p>My expertise includes:</p>
+			<ul>
+				<li>Operational (OT) and Information (IT) technology product security</li>
+				<li>Integration between OT and IT</li>
+				<li>Communication protocols: <a href="https://csa-iot.org/all-solutions/zigbee/">Zigbee</a>, <a href="https://csa-iot.org/all-solutions/matter/">Matter</a>, <a href="https://www.itu.int/hub/2020/09/why-signify-builds-lifi-products-to-itu-standards/">LiFi</a>, WiFi, Bluetooth, Ethernet, ...</li>
+				<li>Smart cards, secure elements and Trusted Platform Modules (TPM) based solutions</li>
+				<li>Trusted Execution Environment (TEE) based solutions</li>
+				<li>Security certification</li>
+			</ul>
+			<p>Actively following EU driven cybersecurity regulations and monitoring cybersecurity regulations in other regions.</p>
 
-		<h2>Standardization</h2>
+			<h2>Standardization</h2>
 
-		<p>Contributing member to the following standardization organizations.</p>
+			<p>Contributing member to the following standardization organizations.</p>
 
-		<!-- CENELEC-->
+			<!-- CENELEC-->
 
-		<div class="logo"><p><a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/"><img src="./img/cenelec.png" alt="CENELEC"></a></p></div>
+			<div class="logo"><p><a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/"><img src="./img/cenelec.png" alt="CENELEC"></a></p></div>
 
-		<h3>CENELEC</h3>
+			<h3>CENELEC</h3>
 
-		<p>Representing the national committee of The Netherlands: <a href="https://www.nen.nl/en/normcommissie-cybersecurity-privacy">Normcommissie Cybersecurity Privacy</a>, <a href="https://www.nen.nl/normcommissie-industrieel-meten-regelen-en-automatiseren-nec-65">Normcommissie Industrieel meten, regelen en automatiseren (NEC 65)</a>.</p>
-		<h4><a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/">JTC13</a> Cybersecurity and data protection</h4>
-		<p>Tasked by EU Commission to develop security standards related to RED and CRA:</p>
-		<ul>
-			<li>WG8: Radio Equipment Directive (<a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_21_5634">RED</a>) security standards development</li>
-			<li>WG9: Cyber Resilience Act (<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act">CRA</a>) security standards development</li>
-		</ul>
-		<h4><a href="https://standards.cencenelec.eu/dyn/www/f?p=305:7:0:25:::FSP_ORG_ID,FSP_LANG_ID:1257871">TC65X</a> Industrial-process measurement, control and automation</h4>
-		<ul>
-			<li>WG3: Cyber security</li>
-		</ul>
-		<h4><a href="https://standards.cencenelec.eu/dyn/www/f?p=305:7:462711656681801::::FSP_ORG_ID:1258281">TC205</a> Home and building electronic systems (HBES)</h4>
-		<ul>
-			<li>WG20: IT security and data protection</li>
-		</ul>
+			<p>Representing the national committee of The Netherlands: <a href="https://www.nen.nl/en/normcommissie-cybersecurity-privacy">Normcommissie Cybersecurity Privacy</a>, <a href="https://www.nen.nl/normcommissie-industrieel-meten-regelen-en-automatiseren-nec-65">Normcommissie Industrieel meten, regelen en automatiseren (NEC 65)</a>.</p>
+			<h4><a href="https://www.cencenelec.eu/areas-of-work/cenelec-sectors/digital-society-cenelec/cybersecurity-and-data-protection/">JTC13</a> Cybersecurity and data protection</h4>
+			<p>Tasked by EU Commission to develop security standards related to RED and CRA:</p>
+			<ul>
+				<li>WG8: Radio Equipment Directive (<a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_21_5634">RED</a>) security standards development</li>
+				<li>WG9: Cyber Resilience Act (<a href="https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act">CRA</a>) security standards development</li>
+			</ul>
+			<h4><a href="https://standards.cencenelec.eu/dyn/www/f?p=305:7:0:25:::FSP_ORG_ID,FSP_LANG_ID:1257871">TC65X</a> Industrial-process measurement, control and automation</h4>
+			<ul>
+				<li>WG3: Cyber security</li>
+			</ul>
+			<h4><a href="https://standards.cencenelec.eu/dyn/www/f?p=305:7:462711656681801::::FSP_ORG_ID:1258281">TC205</a> Home and building electronic systems (HBES)</h4>
+			<ul>
+				<li>WG20: IT security and data protection</li>
+			</ul>
 
-		<!-- CSA -->
+			<!-- CSA -->
 
-		<div class="logo"><p><a href="https://csa-iot.org/"><img src="./img/csa.png" alt="Connectivity Standards Alliance"></a></div>
+			<div class="logo"><p><a href="https://csa-iot.org/"><img src="./img/csa.png" alt="Connectivity Standards Alliance"></a></div>
 
-		<h3>Connectivity Standards Alliance</h3>
+			<h3>Connectivity Standards Alliance</h3>
 
-		<p>Member of the Security Advisory Group and Product Security Working Group Steering Committee. Directly involved in the following security related standardization efforts.</p>
-		<h4>IoT Product Security Certification Program</h4>
-		<p>Ongoing effort to establish <a href="https://csa-iot.org/newsroom/global-approach-to-iot-cybersecurity/">consumer IoT security certification program</a> covering requirements related to development process and device security. The program is currently aiming at covering requirements defined by <a href="https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v020101p.pdf">ETSI EN 303645</a> and <a href="https://csrc.nist.gov/pubs/ir/8425/final">NIST IR 8425</a>. The scope of the program may be extended in the future to cover requirements defined by other standards, support different assurance levels or include products targeting professional market.</p>
-		<h4>Zigbee Direct</h4>
-		<p><a href="https://csa-iot.org/all-solutions/zigbee/zigbee-direct/">Zigbee Direct</a> simplifies onboarding and control of Zigbee devices directly via Bluetooth Low Energy devices that are also capable of participating in Zigbee network.<p>
-		<h4>Matter</h4>
-		<p><a href="https://csa-iot.org/all-solutions/matter/">Matter</a> is IP based protocol providing IoT devices with reliable and secure communication.</p>
+			<p>Member of the Security Advisory Group and Product Security Working Group Steering Committee. Directly involved in the following security related standardization efforts.</p>
+			<h4>IoT Product Security Certification Program</h4>
+			<p>Ongoing effort to establish <a href="https://csa-iot.org/newsroom/global-approach-to-iot-cybersecurity/">consumer IoT security certification program</a> covering requirements related to development process and device security. The program is currently aiming at covering requirements defined by <a href="https://www.etsi.org/deliver/etsi_en/303600_303699/303645/02.01.01_60/en_303645v020101p.pdf">ETSI EN 303645</a> and <a href="https://csrc.nist.gov/pubs/ir/8425/final">NIST IR 8425</a>. The scope of the program may be extended in the future to cover requirements defined by other standards, support different assurance levels or include products targeting professional market.</p>
+			<h4>Zigbee Direct</h4>
+			<p><a href="https://csa-iot.org/all-solutions/zigbee/zigbee-direct/">Zigbee Direct</a> simplifies onboarding and control of Zigbee devices directly via Bluetooth Low Energy devices that are also capable of participating in Zigbee network.<p>
+			<h4>Matter</h4>
+			<p><a href="https://csa-iot.org/all-solutions/matter/">Matter</a> is IP based protocol providing IoT devices with reliable and secure communication.</p>
 
-		<!-- ITU-->
+			<!-- ITU-->
 
-		<div class="logo"><p><a href="https://www.itu.int/en/Pages/default.aspx"><img src="./img/itu.png" alt="ITU"></a></p></div>
+			<div class="logo"><p><a href="https://www.itu.int/en/Pages/default.aspx"><img src="./img/itu.png" alt="ITU"></a></p></div>
 
-		<h3>International Telecommunication Union</h3>
+			<h3>International Telecommunication Union</h3>
 
-		<h4>Enterprise security</h4>
-		<p>Enabling enterprise security (IEEE 802.1x network access control) for LiFi and Power Line Communication, see the specifications and Annex D in:</p>
-		<ul>
-			<li>ITU-T <a href="https://www.itu.int/rec/T-REC-G.9991/en">G.9991</a> Amendment 1</li>
-			<li>ITU-T <a href="https://www.itu.int/rec/T-REC-G.9961">G.9961</a> Amendment 2</li>
-		</ul>
+			<h4>Enterprise security</h4>
+			<p>Enabling enterprise security (IEEE 802.1x network access control) for LiFi and Power Line Communication, see the specifications and Annex D in:</p>
+			<ul>
+				<li>ITU-T <a href="https://www.itu.int/rec/T-REC-G.9991/en">G.9991</a> Amendment 1</li>
+				<li>ITU-T <a href="https://www.itu.int/rec/T-REC-G.9961">G.9961</a> Amendment 2</li>
+			</ul>
 
-		<!-- Fairhair Alliance -->
+			<!-- Fairhair Alliance -->
 
-		<div class="logo"><p><a href="https://openconnectivity.org/developer/specifications/fairhair/"><img src="./img/falliance.png" alt="Fairhair Alliance"></a></p></div>
+			<div class="logo"><p><a href="https://openconnectivity.org/developer/specifications/fairhair/"><img src="./img/falliance.png" alt="Fairhair Alliance"></a></p></div>
 
-		<h3>Fairhair Alliance</h3>
+			<h3>Fairhair Alliance</h3>
 
-		<h4>Secure device onboarding framework</h4>
-		<p>The <a href="https://openconnectivity.org/developer/specifications/fairhair/">Fairhair Alliance</a> brought together lighting, building automation and IT companies to develop a secure device onboarding framework based on IP for lighting and building control in commercial buildings.</p>
-		<ul>
-			 <li>Security Architecture for the Internet of Things (IoT) in Commercial Buildings <a href="http://piotrpolak.com/wp/fairhair_security_wp_march-2018.pdf">whitepaper</a></li>
-		</ul>
+			<h4>Secure device onboarding framework</h4>
+			<p>The <a href="https://openconnectivity.org/developer/specifications/fairhair/">Fairhair Alliance</a> brought together lighting, building automation and IT companies to develop a secure device onboarding framework based on IP for lighting and building control in commercial buildings.</p>
+			<ul>
+				 <li>Security Architecture for the Internet of Things (IoT) in Commercial Buildings <a href="http://piotrpolak.com/wp/fairhair_security_wp_march-2018.pdf">whitepaper</a></li>
+			</ul>
+		</div>
 
 		<!-- Foot -->
 
-		<div class="foot">
+		<div id="foot">
 			<p><b>Piotr Polak</b></p>
 			<p>Cybersecurity and standardization expert</p>
 			<p>Contact me via <a href="https://www.linkedin.com/in/piotrpolak/"><img src="./img/linkedin.png" alt="LinkeIn" width="70"></a></p>
