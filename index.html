@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>Piotr Polak - Cybersecurity, standardization expert</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Personal website of Piotr Polak">
 	<meta name="author" content="Piotr Polak">
 
@@ -27,10 +26,17 @@
 			margin: 0;
 			padding: 0;
 		}
-		div.content {
+		.content {
 			width: 40em;
 			margin: auto;
+			padding-left: 1em;
+			padding-right: 1em;
 			border-top: 10px solid #cb4b16;
+		}
+		@media screen and (max-width: 800px) {
+			.content {
+				width: 100%;
+			}
 		}
 		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 			font-weight: bold;
@@ -51,6 +57,7 @@
 		}
 		#head h2 {
 			font-size: 1.4em;
+			border: none;
 		}
 		h3 {
 			font-size: 1.4em;
