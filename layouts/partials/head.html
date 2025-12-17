@@ -1,0 +1,26 @@
+<head>
+    <title>{{ .Site.Title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}index.xml" title="{{ .Site.Title }}">
+
+    {{/* Adds complete override capability */}}
+    {{ $overrideTemplate := resources.Get "sass/override.scss" }}
+    {{ $override := $overrideTemplate | resources.ExecuteAsTemplate "css/theme.scss" . | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $override.RelPermalink }}">
+
+    {{/* Adds custom styles capability */}}
+    {{ $customTemplate := resources.Get "sass/custom.scss" }}
+    {{ if $customTemplate }}
+    {{ $custom := $customTemplate | resources.ExecuteAsTemplate "css/custom.scss" . | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+    {{ end }}
+
+    {{ template "_internal/google_analytics.html" . }}
+</head>

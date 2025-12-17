@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regulations on Piotr Polak - cybersecurity and standardization expert</title>
+    <link>http://localhost:1313/tags/regulations/</link>
+    <description>Recent content in Regulations on Piotr Polak - cybersecurity and standardization expert</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2026, Piotr Polak</copyright>
+    <lastBuildDate>Tue, 16 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/regulations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CRA vs RED</title>
+      <link>http://localhost:1313/post/cra_vs_red/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/cra_vs_red/</guid>
+      <description>&lt;p&gt;Radio Equipment Directive and Cyber Resilience Act are different is scope.&lt;/p&gt;&#xA;&lt;h2 id=&#34;red&#34;&gt;RED&lt;/h2&gt;&#xA;&lt;p&gt;RED only specifies a required capabilities that a product is required to have at the time of the placement on the EU market. Another aspect that is covered by RED specification are protection for specific asset classes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Security assets&lt;/li&gt;&#xA;&lt;li&gt;Network assets&lt;/li&gt;&#xA;&lt;li&gt;Privacy assets&lt;/li&gt;&#xA;&lt;li&gt;Financial assets&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Cyber Resilience Act overview</title>
+      <link>http://localhost:1313/post/cra_overview/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/cra_overview/</guid>
+      <description>&lt;p&gt;The Cyber Resilience Act (CRA) goal is to ensure the manufacturer employs appropriate processes ensuring the product is secure when placed on the EU market and the product security (compliance with the CRA) is maintained over the lifetime of the product.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-timeline&#34;&gt;The timeline&lt;/h2&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../../images/cra_timeline.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;the-scope&#34;&gt;The scope&lt;/h2&gt;&#xA;&lt;p&gt;All products with digital elements including hardware, software and remote data processing (apps and cloud services the product depends on and is produced by the manufacture of the products) are in scope of the CRA with a few exceptions listed by the regulation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
