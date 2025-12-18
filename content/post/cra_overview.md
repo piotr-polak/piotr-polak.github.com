@@ -17,7 +17,7 @@ The CRA establishes a phased implementation approach and will be activated in tw
 
 ## The scope {#the-scope}
 
-All products with digital elements including hardware, software and remote data processing (apps and cloud services the product depends on and is produced by the manufacture of the products) are in scope of the CRA with a few exceptions listed by the regulation.
+All products with digital elements including hardware, software and remote data processing (applications and cloud services the product depends on and is produced by or under control of the manufacture of the products) are in scope of the CRA with a few exceptions listed by the regulation.
 
 This effectively means any product that is capable of communication has to be evaluated for compliance with the CRA.
 
@@ -58,9 +58,9 @@ Regardless of the product classification the manufacturer may always decide to i
 
 ## Standards {#standards}
 
-A number of CRA related standards were requested to be developed in the [standardization request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>). This includes three "horizontal" standards addressing process, vulnerabilities handling and catalog of controls plus a number of "vertical" standards requested for each of the important product classes.
+A number of CRA related standards were requested to be developed in the [standardization request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>) targeted at [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). This includes three "horizontal" standards addressing process, vulnerabilities handling and catalog of controls plus a number of "vertical" standards requested for each of the important product classes.
 
-All requested standards are to be harmonized and some of them (vulnerability handling and vertical standards) are expected also to provide presumption of conformity allowing manufacture to perform self assessment.
+All requested standards are to be harmonized and some of them (vulnerability handling and vertical standards) are expected also to provide presumption of conformity allowing manufacturer to perform self assessment.
 
 
 ## Product evaluation flow {#product-evaluation-flow}
@@ -74,9 +74,9 @@ The manufacturer of a product of the default class has a freedom to select any a
 
 ## Product assessment {#product-assessment}
 
-In order to prove the conformity with the CRA the manufacturer needs to be in a position to demonstrate that the processes is employed ensuring the product is secure and the security of the product (compliance with the CRA) is maintained over the lifetime of the product. This includes all obligations listed by the CRA.
+In order to prove the conformity with the CRA the manufacturer needs to be in a position to demonstrate that the process is employed ensuring the product is secure and the security of the product (compliance with the CRA) is maintained over the lifetime of the product. This includes all obligations listed by the CRA.
 
-While the manufacturer has the freedom to select any specification/criteria to achieve the compliance with the CRA the best approach is to follow the specifications that are being developed by European standardization organizations [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). These specifications are developed to cover the full scope of the CRA including processes, product requirements and all product classes.
+While the manufacturer has the freedom to select any specification/criteria to achieve the compliance with the CRA the best approach is to follow the specifications that are being developed by European standardization organizations [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). These specifications are developed to cover the full scope of the CRA processes and product requirements for all product classes.
 
 
 ## Relevant links {#relevant-links}
