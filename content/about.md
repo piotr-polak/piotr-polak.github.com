@@ -10,7 +10,7 @@ I am cybersecurity expert experienced in driving connected product security deve
 
 ## Expertise {#expertise}
 
-My professional career has spanned twenty-plus years in the field of connected product development with strong focus on product security. My expertise includes:
+My professional career has spanned twenty-plus years working at [Philips](<https://www.philips.com/>), [NXP](<https://www.nxp.com/>) and currently [Signify](<https://www.signify.com/>) in the field of connected product development with strong focus on product security. My expertise includes:
 
 -   Cybersecurity standardization and certification: RED DA, CRA, EN IEC 62443, EN 303645, ...
 -   Operational (OT) and Information (IT) technology product security including integration between OT and IT
