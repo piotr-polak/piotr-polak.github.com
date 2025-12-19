@@ -35,7 +35,7 @@ copyright = "&copy; Copyright 2026, Piotr Polak"
   [[menu.main]]
     identifier = "Subscribe"
     name = "Subscribe"
-    title = "Subscribe"
+    title = "RSS"
     url = "/index.xml"
     weight = -80
   [[menu.main]]
