@@ -1,5 +1,6 @@
 +++
-title = "Cyber Resilience Act overview"
+title = "Cyber Resilience Act - an overview"
+author = ["Piotr Polak"]
 date = 2025-09-07
 categories = ["Regulations", "Cybersecurity"]
 draft = false
@@ -76,12 +77,12 @@ The manufacturer of a product of the default class has a freedom to select any a
 
 In order to prove the conformity with the CRA the manufacturer needs to be in a position to demonstrate that the process is employed ensuring the product is secure and the security of the product (compliance with the CRA) is maintained over the lifetime of the product. This includes all obligations listed by the CRA.
 
-While the manufacturer has the freedom to select any specification/criteria to achieve the compliance with the CRA the best approach is to follow the specifications that are being developed by European standardization organizations [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). These specifications are developed to cover the full scope of the CRA processes and product requirements for all product classes.
+While the manufacturer has the freedom to select any specification/criteria to achieve the compliance with the CRA the best approach is to follow the specifications that are being developed by European standardization organizations [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). These specifications are developed to cover the full scope of the CRA process and product requirements for all product classes.
 
 
 ## Relevant links {#relevant-links}
 
--   [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
+-   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 -   [CRA Standardization Request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>)
 -   [Notified Bodies](<https://single-market-economy.ec.europa.eu/single-market/goods/building-blocks/notified-bodies_en>)
 -   [Blue Guide](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001>)

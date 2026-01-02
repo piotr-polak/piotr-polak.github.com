@@ -1,5 +1,5 @@
 baseURL = "https://piotrpolak.com"
-title = "Piotr Polak - cybersecurity and standardization expert"
+title = "Piotr Polak | Cybersecurity and standardization expert"
 languageCode = "en-us"
 theme = "devise"
 relativeURLs = true
@@ -47,7 +47,7 @@ copyright = "&copy; Copyright 2026, Piotr Polak"
 
 # Configuration Features
 [params]
-  description = "Piotr Polak - cybersecurity and standardization expert"      # Your meta description of the site
+  description = "Piotr Polak | Cybersecurity and standardization expert"      # Your meta description of the site
   header_title = "Piotr Polak"               # Your header title
   header_subtitle = "Cybersecurity and standardization expert" # Your header subtitle
 # home_image = "/images/avatar.png"          # Path to header image starting from the static directory (optional)

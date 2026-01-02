@@ -1,5 +1,6 @@
 +++
 title = "RED Delegated Act vs Cyber Resilience Act"
+author = ["Piotr Polak"]
 date = 2025-12-17
 categories = ["Regulations", "Cybersecurity"]
 draft = false
@@ -50,5 +51,5 @@ The RED DA is enforced from 1st of August 2025 but is already [expected to be re
 ## Relevant links {#relevant-links}
 
 -   [Cyber Resilience Act overview](<http://piotrpolak.com/post/cra_overview>)
--   [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
--   [RED DA](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.007.01.0006.01.ENG&toc=OJ%3AL%3A2022%3A007%3ATOC>)
+-   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
+-   [RED DA legal text](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.007.01.0006.01.ENG&toc=OJ%3AL%3A2022%3A007%3ATOC>)
