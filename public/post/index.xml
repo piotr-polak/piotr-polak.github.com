@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2026, Piotr Polak</copyright>
-    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webinar | CRA: The Manufacturer&#39;s Perspective</title>
+      <link>http://localhost:1313/post/cra_webinar/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/post/cra_webinar/</guid>
+      <description>&lt;p&gt;On February 3rd at 14:00, join me for an in-depth overview of the  &lt;a href=&#34;https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng&#34;&gt;Cyber Resilience Act&lt;/a&gt;. In this webinar, I will break down the key security and process requirements for products with digital elements under the Cyber Resilience Act (CRA) and explain what organizations need to do to achieve and maintain compliance.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;../images/cra_webinar.jpg&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;You can register through the following link (for The Lighting Industry Association members only). &lt;a href=&#34;https://www.thelia.org.uk/ems-event-calendar/events/webinars/tech-talks-2-registration-form.html&#34;&gt;https://www.thelia.org.uk/ems-event-calendar/events/webinars/tech-talks-2-registration-form.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cyber Resilience Act - reporting obligations</title>
       <link>http://localhost:1313/post/cra_reporting_obligations/</link>

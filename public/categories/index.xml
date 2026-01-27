@@ -7,19 +7,26 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2026, Piotr Polak</copyright>
-    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cybersecurity</title>
       <link>http://localhost:1313/categories/cybersecurity/</link>
-      <pubDate>Sat, 27 Dec 2025 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
       <guid>http://localhost:1313/categories/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webinar</title>
+      <link>http://localhost:1313/categories/webinar/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/categories/webinar/</guid>
       <description></description>
     </item>
     <item>
       <title>Regulations</title>
       <link>http://localhost:1313/categories/regulations/</link>
-      <pubDate>Sat, 27 Dec 2025 00:00:00 +0100</pubDate>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0100</pubDate>
       <guid>http://localhost:1313/categories/regulations/</guid>
       <description></description>
     </item>
