@@ -6,7 +6,7 @@ tags = ["about"]
 draft = false
 +++
 
-I am a cybersecurity expert who drives the development and certification of secure connected products. I actively contribute to shaping global product security standards through my work with [CEN-CENELEC](<https://www.cencenelec.eu/>), the [Connectivity Standards Alliance](<https://csa-iot.org/>), and the [International Telecommunication Union](<https://www.itu.int/en/Pages/default.aspx>).
+I am a cybersecurity expert who drives the development and certification of secure connected products. I actively contribute to global product security standards through my work with [CEN-CENELEC](<https://www.cencenelec.eu/>), the [Connectivity Standards Alliance](<https://csa-iot.org/>), and the [International Telecommunication Union](<https://www.itu.int/en/Pages/default.aspx>).
 
 I bring over twenty years of experience at [Philips](<https://www.philips.com/>), [NXP](<https://www.nxp.com/>) , and currently [Signify](<https://www.signify.com/>), working in connected product development with a strong and consistent focus on product security. My expertise spans both technical implementation and standards-driven security, including:
 
