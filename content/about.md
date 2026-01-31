@@ -25,7 +25,7 @@ I bring over twenty years of experience at [Philips](<https://www.philips.com/>)
 
 -   IoT Systems: OT and building automation security, LiFi connectivity,  IT network security, NFC commissioning
 -   Automotive: V2V/V2I communication, telematics, OTA updates
--   Mobile: TEE, secure elements, NFC
+-   Mobile: TEE, secure element, NFC
 
 
 ## Standards Contributions {#standards-contributions}
