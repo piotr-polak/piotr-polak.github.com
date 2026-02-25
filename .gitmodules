@@ -1,3 +1,7 @@
 [submodule "themes/devise"]
 	path = themes/devise
 	url = https://github.com/austingebauer/devise.git
+
+[submodule "piotr-polak.github.com"]
+	path = piotr-polak.github.com
+	url = git@github.com:piotr-polak/piotr-polak.github.com.git
