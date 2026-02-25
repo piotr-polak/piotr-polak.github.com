@@ -40,7 +40,7 @@ I help shape the future of connected product security by driving global standard
 
 ## Product &amp; Process Compliance {#product-and-process-compliance}
 
-I have extensive experience ensuring that connected products and processes meet global security and safety standards, including Cyber Resilience Act (CRA), RED Delegated Act (RED DA), IEC 62443, NIST SP 800-82, and UL 2900. My work bridges regulatory requirements and practical implementation, helping organizations achieve secure, certified, and future-ready products.
+I have extensive experience ensuring that connected products and processes meet global security standards, including Cyber Resilience Act (CRA), RED Delegated Act (RED DA), IEC 62443, NIST SP 800-82, and UL 2900. My work bridges regulatory requirements and practical implementation, helping organizations achieve secure, certified, and future-ready products.
 
 
 ## White papers {#white-papers}
