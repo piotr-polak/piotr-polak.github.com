@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2026, Piotr Polak</copyright>
-    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/regulations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CRA guidance open consultation started</title>
+      <link>http://localhost:1313/post/cra_guidance_open_consultation/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/post/cra_guidance_open_consultation/</guid>
+      <description>&lt;p&gt;Public consultation on &lt;a href=&#34;https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en&#34;&gt;CRA Draft Guidance&lt;/a&gt; released by EU Commission was launched today.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RED Delegated Act is repealed</title>
+      <link>http://localhost:1313/post/red_da_repealed/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/post/red_da_repealed/</guid>
+      <description>&lt;p&gt;The decision by the EU Commission to repeal RED DA once the Cyber Resilience Act becomes fully applicable on 11 December 2027 is adopted: &lt;a href=&#34;https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14766-Cyb%5B%E2%80%A6%5Dated-Regulation-supplementing-the-Radio-Equipment-Directive_en&#34;&gt;Delegated Regulation&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cyber Resilience Act - reporting obligations</title>
       <link>http://localhost:1313/post/cra_reporting_obligations/</link>

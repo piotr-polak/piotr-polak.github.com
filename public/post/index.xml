@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2026, Piotr Polak</copyright>
-    <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2026 00:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CRA Guidance: Public Consultation Now Open</title>
+      <link>http://localhost:1313/post/cra_guidance_open_consultation/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/post/cra_guidance_open_consultation/</guid>
+      <description>&lt;p&gt;Public consultation on &lt;a href=&#34;ttps://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en&#34;&gt;Commission guidance on the Cyber Resilience Act&lt;/a&gt; was launched today.&lt;/p&gt;&#xA;&lt;p&gt;The draft aims to provide guidance on several outstanding issues, including:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Free and open-source software&lt;/li&gt;&#xA;&lt;li&gt;Substantial modifications and spare parts&lt;/li&gt;&#xA;&lt;li&gt;Support period&lt;/li&gt;&#xA;&lt;li&gt;Important and critical products&lt;/li&gt;&#xA;&lt;li&gt;Cybersecurity risk assessment and integration of products and components&lt;/li&gt;&#xA;&lt;li&gt;Remote data processing&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>RED Delegated Act is repealed</title>
       <link>http://localhost:1313/post/red_da_repealed/</link>
