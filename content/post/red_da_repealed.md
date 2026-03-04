@@ -1,5 +1,5 @@
 +++
-title = "RED Delegated Act is repealed"
+title = "RED Delegated Act is Repealed"
 author = ["Piotr Polak"]
 date = 2026-02-17T00:00:00+01:00
 categories = ["Regulations", "News"]

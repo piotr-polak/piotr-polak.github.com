@@ -1,5 +1,5 @@
 +++
-title = "Cyber Resilience Act - reporting obligations"
+title = "Cyber Resilience Act: Reporting Obligations"
 author = ["Piotr Polak"]
 date = 2026-01-02T00:00:00+01:00
 categories = ["Regulations", "Cybersecurity"]

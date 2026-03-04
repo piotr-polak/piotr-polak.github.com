@@ -1,5 +1,5 @@
 +++
-title = "Cyber Resilience Act - an overview"
+title = "Cyber Resilience Act: an Overview"
 author = ["Piotr Polak"]
 date = 2025-09-07
 categories = ["Regulations", "Cybersecurity"]
