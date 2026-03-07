@@ -6,7 +6,7 @@ categories = ["Regulations", "News"]
 draft = false
 +++
 
-Public consultation on [Commission guidance on the Cyber Resilience Act](ttps://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en) was launched today.
+Public consultation on [Commission guidance on the Cyber Resilience Act](<https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en>) was launched today.
 
 The draft aims to provide guidance on several outstanding issues, including:
 
