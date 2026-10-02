@@ -7,7 +7,9 @@ draft = false
 description = "How CRA reporting obligations work from 11 September 2026: what counts as an actively exploited vulnerability or severe incident, the 24h/72h/14-day deadlines, and how manufacturers can prepare."
 +++
 
-As of 11 September 2026, the reporting obligations of manufacturers required by the Cyber Resilience Act will be enforced.
+*Update (2 October 2026): the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>) is now operational.*
+
+Since 11 September 2026, the reporting obligations of manufacturers required by the Cyber Resilience Act are enforced.
 
 
 ## Reporting Process {#reporting-process}
@@ -33,8 +35,8 @@ Manufacturers must report ****actively exploited vulnerabilities**** and ****sev
 
 ### Submission Platform {#submission-platform}
 
--   Reports will be submitted via the ****CRA Single Reporting Platform****, developed by ENISA
--   Expected launch: ****11 September 2026****
+-   Reports are submitted via the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), developed by ENISA
+-   Operational since ****11 September 2026****
 
 
 ### Distribution {#distribution}
@@ -59,7 +61,7 @@ Manufacturers should:
 
 ****Prepare Reporting Procedures****
 
--   Set up processes to submit reports through the CRA Single Reporting Platform once it is operational (expected by 11 September 2026).
+-   Set up processes to submit reports through the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), operational since 11 September 2026.
 -   Ensure reports can meet the required timelines:
     -   Initial report: within 24 hours of awareness
     -   Full report: within 72 hours
@@ -78,6 +80,7 @@ Manufacturers should:
 
 ## Relevant links {#relevant-links}
 
+-   [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>)
 -   [Cyber Resilience Act overview]({{< relref "post/cra_overview" >}})
 -   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 -   [ENISA](<https://www.enisa.europa.eu/>)
