@@ -4,9 +4,11 @@ author = ["Piotr Polak"]
 date = 2025-12-17
 categories = ["Regulations", "Cybersecurity"]
 draft = false
+description = "RED Delegated Act vs Cyber Resilience Act: differences in scope, protected assets, process requirements, and product assessment, and what the transition means for manufacturers of connected products."
+images = ["/images/cra_timeline.png"]
 +++
 
-Both EU regulations the Radio Equipment Directive [Delegated Act](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.007.01.0006.01.ENG&toc=OJ%3AL%3A2022%3A007%3ATOC>) (RED DA) and [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) (CRA) address digital product security. While their goal at first glance seems  to  bethe same they are fundamentally different in scope and focus.
+Both EU regulations the Radio Equipment Directive [Delegated Act](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.007.01.0006.01.ENG&toc=OJ%3AL%3A2022%3A007%3ATOC>) (RED DA) and [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) (CRA) address digital product security. While their goal at first glance seems to be the same, they are fundamentally different in scope and focus.
 
 The RED DA addresses security of radio equipment with radio interfaces that can communicate with the Internet. The focus of the RED DA is to protect networks (Article 3.3 d), personal data (Article 3.3 e) and financial data or transactions (Article 3.3 f). The priority here is not even the product security but to ensure that the product has the capabilities to ensure networks, user data and financial data or transactions are safeguarded.
 
@@ -38,18 +40,18 @@ The harmonized standards such as [EN 18031-1/2/3](https://www.cencenelec.eu/news
 
 The CRA may require more rigorous assessment depending on the product’s classification. Important or critical products listed by the CRA may require third party assessment of an accredited test lab ([Notified Body](<https://single-market-economy.ec.europa.eu/single-market/goods/building-blocks/notified-bodies_en>)).
 
-Manufacturers that have already performed the product assessment for the RED DA are expected to extend the scope of their assessment to cover all [obligations of manufacturers](<http://piotrpolak.com/post/cra_overview/>) defined by the CRA including not only the product security or capabilities but also consider process related requirements.
+Manufacturers that have already performed the product assessment for the RED DA are expected to extend the scope of their assessment to cover all [obligations of manufacturers]({{< relref "post/cra_overview" >}}) defined by the CRA including not only the product security or capabilities but also consider process related requirements.
 
 
 ## The timeline {#the-timeline}
 
 {{< figure src="/images/cra_timeline.png" >}}
 
-The RED DA is enforced from 1st of August 2025 but is already [expected to be repealed](<https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14766-Cybersecurity-repeal-of-Delegated-Regulation-supplementing-the-Radio-Equipment-Directive_en>) the day the CRA is enforced which is 10th of December 2027.
+The RED DA is enforced from 1st of August 2025 but is already [expected to be repealed](<https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14766-Cybersecurity-repeal-of-Delegated-Regulation-supplementing-the-Radio-Equipment-Directive_en>) the day the CRA is enforced which is 11 December 2027.
 
 
 ## Relevant links {#relevant-links}
 
--   [Cyber Resilience Act overview](<http://piotrpolak.com/post/cra_overview>)
+-   [Cyber Resilience Act overview]({{< relref "post/cra_overview" >}})
 -   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 -   [RED DA legal text](<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2022.007.01.0006.01.ENG&toc=OJ%3AL%3A2022%3A007%3ATOC>)

@@ -4,6 +4,8 @@ author = ["Piotr Polak"]
 date = 2025-09-07
 categories = ["Regulations", "Cybersecurity"]
 draft = false
+description = "What the EU Cyber Resilience Act requires of products with digital elements: scope, product classes, conformity assessment, and manufacturer obligations, explained from a manufacturer's perspective."
+images = ["/images/cra_timeline.png"]
 +++
 
 The [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) (CRA) EU regulation goal is to ensure the manufacturer employs appropriate processes ensuring the product is secure when placed on the EU market and the product security (compliance with the CRA) is maintained over the lifetime of the product.
@@ -13,24 +15,24 @@ The [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 
 {{< figure src="/images/cra_timeline.png" >}}
 
-The CRA establishes a phased implementation approach and will be activated in two steps. First step is planed to be activated in September of 2026 and imposes reporting obligations related to actively exploited vulnerabilities and serious security incidents, this include all products that are already placed on the EU market. The requirement to be fully complaint with the CRA will be activated in December 2027.
+The CRA establishes a phased implementation approach and will be activated in two steps. First step is planned to be activated in September of 2026 and imposes reporting obligations related to actively exploited vulnerabilities and serious security incidents, this includes all products that are already placed on the EU market. The requirement to be fully compliant with the CRA will be activated in December 2027.
 
 
 ## The scope {#the-scope}
 
-All products with digital elements including hardware, software and remote data processing (applications and cloud services the product depends on and is produced by or under control of the manufacture of the products) are in scope of the CRA with a few exceptions listed by the regulation.
+All products with digital elements including hardware, software and remote data processing (applications and cloud services the product depends on and is produced by or under control of the manufacturer of the products) are in scope of the CRA with a few exceptions listed by the regulation.
 
 This effectively means any product that is capable of communication has to be evaluated for compliance with the CRA.
 
 
 ## Obligations of manufacturers {#obligations-of-manufacturers}
 
-The CRA introduces a number of obligations for compliance. The manufactures must ensure:
+The CRA introduces a number of obligations for compliance. The manufacturers must ensure:
 
 -   The product is compliant with all essential requirements related to product security and vulnerability handling
 -   Product cybersecurity risk analysis is performed and documented on regular basis over the product support period
 -   Due diligence when integrating components is exercised to ensure cybersecurity risks that may be introduced by the components are understood and if necessary mitigated
--   Relevant cybersecurity aspects concerning the product are documented and sufficient information is provided to third parties (including know vulnerabilities)
+-   Relevant cybersecurity aspects concerning the product are documented and sufficient information is provided to third parties (including known vulnerabilities)
 -   Vulnerabilities are handled during the product support period
 -   Actively exploited vulnerabilities and severe security incidents are reported within 24h
 
@@ -39,7 +41,7 @@ The CRA introduces a number of obligations for compliance. The manufactures must
 
 The "core functionality" of the product determines the product classification. Majority of the products in scope of the CRA belong to the "default" class. These are all products categories that are not explicitly mentioned by the CRA as important or critical products.
 
-The are two classes of "important products" listed by the regulation: Class I and Class II, plus additional group of "critical products".
+There are two classes of "important products" listed by the regulation: Class I and Class II, plus additional group of "critical products".
 
 {{< figure src="/images/cra_product_classes.png" >}}
 

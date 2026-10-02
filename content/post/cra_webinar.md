@@ -4,7 +4,11 @@ author = ["Piotr Polak"]
 date = 2026-01-27T00:00:00+01:00
 categories = ["Cybersecurity", "Webinar"]
 draft = false
+description = "Webinar on the Cyber Resilience Act from the manufacturer's perspective, hosted with The Lighting Industry Association (3 February 2026)."
+images = ["/images/cra_webinar.jpg"]
 +++
+
+*This webinar took place on 3 February 2026.*
 
 On February 3rd at 14:00, join me for an in-depth overview of the  [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>). In this webinar, I will break down the key security and process requirements for products with digital elements under the Cyber Resilience Act (CRA) and explain what organizations need to do to achieve and maintain compliance.
 

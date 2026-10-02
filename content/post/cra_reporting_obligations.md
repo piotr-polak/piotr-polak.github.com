@@ -4,9 +4,10 @@ author = ["Piotr Polak"]
 date = 2026-01-02T00:00:00+01:00
 categories = ["Regulations", "Cybersecurity"]
 draft = false
+description = "How CRA reporting obligations work from 11 September 2026: what counts as an actively exploited vulnerability or severe incident, the 24h/72h/14-day deadlines, and how manufacturers can prepare."
 +++
 
-As of 11 of September 2026, the reporting obligations of manufacturers required by the Cyber Resilience Act will be enforced.
+As of 11 September 2026, the reporting obligations of manufacturers required by the Cyber Resilience Act will be enforced.
 
 
 ## Reporting Process {#reporting-process}
@@ -77,7 +78,7 @@ Manufacturers should:
 
 ## Relevant links {#relevant-links}
 
--   [Cyber Resilience Act overview](<http://piotrpolak.com/post/cra_overview>)
+-   [Cyber Resilience Act overview]({{< relref "post/cra_overview" >}})
 -   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 -   [ENISA](<https://www.enisa.europa.eu/>)
 -   [CSIRTs network](<https://csirtsnetwork.eu/>)

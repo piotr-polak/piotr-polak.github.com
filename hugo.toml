@@ -1,16 +1,12 @@
-baseURL = "https://piotrpolak.com"
+baseURL = "https://www.piotrpolak.com"
 title = "Piotr Polak | Cybersecurity and standardization expert"
 languageCode = "en-us"
 theme = "devise"
-relativeURLs = true
+relativeURLs = false
 enableEmoji = true
 googleAnalytics = ""
 enableRobotsTXT = true
-copyright = "&copy; Copyright 2026, Piotr Polak"
-
-[Author]
-    name = "Piotr Polak"
-    email = "contact@piotrpolak.com"
+copyright = "© 2026 Piotr Polak"
 
 # Main menu items
 [menu]
@@ -26,6 +22,12 @@ copyright = "&copy; Copyright 2026, Piotr Polak"
     title = "Posts"
     url = "/post/"
     weight = -100
+  [[menu.main]]
+    identifier = "cra"
+    name = "CRA"
+    title = "Cyber Resilience Act"
+    url = "/cra/"
+    weight = -95
   [[menu.main]]
     identifier = "categories"
     name = "Categories"
@@ -47,7 +49,8 @@ copyright = "&copy; Copyright 2026, Piotr Polak"
 
 # Configuration Features
 [params]
-  description = "Piotr Polak | Cybersecurity and standardization expert"      # Your meta description of the site
+  author = "Piotr Polak"                                  # Used for the author meta tag
+  description = "Practical guidance on the EU Cyber Resilience Act, the RED Delegated Act, and product security standards, from a standardization expert with twenty years in connected product development."      # Your meta description of the site
   header_title = "Piotr Polak"               # Your header title
   header_subtitle = "Cybersecurity and standardization expert" # Your header subtitle
 # home_image = "/images/avatar.png"          # Path to header image starting from the static directory (optional)
@@ -61,7 +64,7 @@ copyright = "&copy; Copyright 2026, Piotr Polak"
     fontColor = "#212529"
   [[params.social]]
     fa_icon = "fab fa-github fa-1x"          # Font Awesome icon class
-    href = "http://github.com/piotr-polak"   # Link to associate with icon (http://, https://, mailto:)
+    href = "https://github.com/piotr-polak"  # Link to associate with icon (http://, https://, mailto:)
   [[params.social]]
     fa_icon = "fab fa-linkedin-in fa-1x"
     href = "https://linkedin.com/in/piotrpolak"
