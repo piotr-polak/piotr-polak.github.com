@@ -11,6 +11,8 @@ description = "Delegated Regulation (EU) 2026/339 repeals the RED cybersecurity 
 The European Commission adopted [Delegated Regulation (EU) 2026/339](<https://eur-lex.europa.eu/eli/reg_del/2026/339/oj/eng>) on **16 February 2026**. Published in the Official Journal on 29 April 2026, it repeals the RED cybersecurity Delegated Act—Delegated Regulation (EU) 2022/30—with effect from **11 December 2027**, when the main CRA requirements apply.
 
 
+TEST ONLY, DO NOT MERGE: [broken anchor](/post/cra_overview/#no-such-section).
+
 ## What this means for manufacturers
 
 Until 11 December 2027, radio equipment in scope must still meet the applicable RED DA cybersecurity requirements. The EN 18031 series provides a route to presumption of conformity, subject to the [restrictions in its Official Journal citations](<https://eur-lex.europa.eu/eli/dec_impl/2025/138/oj/eng>).
