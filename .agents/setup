@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+started=$SECONDS
+
+# Use the same version as the deployment workflow, without a second version pin.
+hugo_version="$(awk '$1 == "HUGO_VERSION:" { print $2 }' "$repo_root/.github/workflows/hugo.yaml")"
+if [[ ! "$hugo_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    echo "Could not read HUGO_VERSION from .github/workflows/hugo.yaml" >&2
+    exit 1
+fi
+
+installed_version="$(hugo version 2>/dev/null || true)"
+if [[ "$installed_version" == "hugo v${hugo_version}-"* && "$installed_version" == *+extended* ]]; then
+    echo "Hugo Extended ${hugo_version} is already installed (${SECONDS}s)."
+else
+    echo "Installing Hugo Extended ${hugo_version}..."
+    case "$(uname -m)" in
+        x86_64) arch=amd64 ;;
+        aarch64) arch=arm64 ;;
+        *) echo "Unsupported architecture: $(uname -m)" >&2; exit 1 ;;
+    esac
+    tmpdir="$(mktemp -d)"
+    trap 'rm -rf -- "$tmpdir"' EXIT
+    archive="hugo_extended_${hugo_version}_linux-${arch}.tar.gz"
+    release="https://github.com/gohugoio/hugo/releases/download/v${hugo_version}"
+    curl --fail --silent --show-error --location --retry 3 \
+        "$release/$archive" -o "$tmpdir/$archive"
+    curl --fail --silent --show-error --location --retry 3 \
+        "$release/hugo_${hugo_version}_checksums.txt" -o "$tmpdir/checksums.txt"
+    (cd -- "$tmpdir" && sha256sum --check --ignore-missing checksums.txt)
+    tar -xzf "$tmpdir/$archive" -C "$tmpdir" hugo
+    sudo -n install -m 0755 "$tmpdir/hugo" /usr/local/bin/hugo
+    hugo version
+    echo "Hugo installed in $((SECONDS - started))s."
+fi
+
+# The pinned Devise submodule vendors Bootstrap, Font Awesome, and webfonts.
+echo "Initializing theme submodules..."
+git -C "$repo_root" submodule update --init --recursive
+echo "Orb setup finished in $((SECONDS - started))s."
