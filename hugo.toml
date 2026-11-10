@@ -76,3 +76,15 @@ copyright = "© 2026 Piotr Polak"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+# "Read next" links on posts: rank by shared categories, then by date
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
