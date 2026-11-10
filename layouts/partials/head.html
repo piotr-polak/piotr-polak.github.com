@@ -17,7 +17,8 @@
     <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ $image }}">
-    {{ if not .IsHome }}
+    {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
+    {{ if and (not .IsHome) (not .Date.IsZero) }}
     {{ $published := .Date.Format "2006-01-02T15:04:05Z07:00" }}
     {{ $modified := .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}
     <meta property="article:published_time" content="{{ $published }}">

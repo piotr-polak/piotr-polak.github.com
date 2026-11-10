@@ -1,5 +1,25 @@
 {{ define "main" }}
-    <div class="pl-sm-4 ml-sm-5">
-        <h1>404 — Not Found</h1>
+    <div class="pl-sm-4 ml-sm-5 pt-2">
+        <h1 class="mb-3">Page not found</h1>
+        <p>The page you are looking for does not exist or has moved. You can continue from one of these pages:</p>
+        <ul class="mb-4">
+            <li><a href="/">Home</a></li>
+            {{ with site.GetPage "/cra" }}<li><a href="{{ .RelPermalink }}">{{ .Title }} guide</a></li>{{ end }}
+            {{ with site.GetPage "/post" }}<li><a href="{{ .RelPermalink }}">All posts</a></li>{{ end }}
+        </ul>
+
+        <h2 class="h5"><span class="badge category">Latest articles</span></h2>
+        <ul class="list-unstyled">
+            {{ range first site.Params.recent_posts (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+                <li>
+                    {{ .Date.Format "Jan 2 2006" }}
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+
+        {{ with site.GetPage "/contact" }}
+        <p class="text-muted">If a link on this site brought you here, please <a href="{{ .RelPermalink }}">let me know</a>.</p>
+        {{ end }}
     </div>
 {{ end }}
