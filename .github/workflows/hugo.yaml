@@ -3,14 +3,17 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  # Pull requests only build and check, so a newer push to a PR cancels its older run;
+  # deployments still queue one at a time.
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 defaults:
   run:
     shell: bash
@@ -21,6 +24,8 @@ jobs:
       DART_SASS_VERSION: 1.96.0
       GO_VERSION: 1.25.5
       HUGO_VERSION: 0.152.2
+      LYCHEE_VERSION: 0.24.2
+      LYCHEE_SHA256: 73657a111819a30c47c08352896796f23d64e4eb2b3ed39b6d32149241566fc5
       NODE_VERSION: 24.12.0
       TZ: Europe/Oslo
     steps:
@@ -39,6 +44,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v5
       - name: Create directory for user-specific executable files
@@ -94,11 +100,35 @@ jobs:
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+      - name: Install lychee
+        run: |
+          lychee_file="lychee-x86_64-unknown-linux-musl.tar.gz"
+          curl -sSfL -o "${lychee_file}" \
+            "https://github.com/lycheeverse/lychee/releases/download/lychee-v${LYCHEE_VERSION}/${lychee_file}"
+          echo "${LYCHEE_SHA256}  ${lychee_file}" | sha256sum --check
+          mkdir "${HOME}/.local/lychee"
+          tar -C "${HOME}/.local/lychee" -xf "${lychee_file}" --strip-components=1
+          rm "${lychee_file}"
+          echo "${HOME}/.local/lychee" >> "${GITHUB_PATH}"
+      - name: Check internal links
+        # Offline: only links to this site's own pages, files, and #anchors; a broken one stops the deploy.
+        working-directory: public
+        run: |
+          lychee \
+            --offline \
+            --include-fragments \
+            --root-dir "${PWD}" \
+            --index-files index.html \
+            --remap "^https://www\.piotrpolak\.com/(.*)$ file://${PWD}/\$1" \
+            --no-progress \
+            '**/*.html' '**/*.xml'
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
