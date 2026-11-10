@@ -67,7 +67,7 @@ My contributions include work on G.9991.
 
 ## Publications and patents
 
-- [ELIoT: enhancing LiFi for next-generation Internet of Things](https://jwcn-eurasipjournals.springeropen.com/articles/10.1186/s13638-022-02168-6) — EURASIP Journal on Wireless Communications and Networking
+- [ELIoT: enhancing LiFi for next-generation Internet of Things](https://link.springer.com/article/10.1186/s13638-022-02168-6) — EURASIP Journal on Wireless Communications and Networking
 - [Security Architecture for the Internet of Things (IoT) in Commercial Buildings](/fairhair_security_wp_march-2018.pdf) — White paper
 - A selection of my patent work is listed on [Justia](https://patents.justia.com/inventor/piotr-polak).
 
