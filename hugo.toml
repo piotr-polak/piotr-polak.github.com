@@ -24,16 +24,10 @@ copyright = "© 2026 Piotr Polak"
     weight = -100
   [[menu.main]]
     identifier = "cra"
-    name = "CRA"
+    name = "CRA guide"
     title = "Cyber Resilience Act"
     url = "/cra/"
     weight = -95
-  [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    title = "Categories"
-    url = "/categories/"
-    weight = -90
   [[menu.main]]
     identifier = "Subscribe"
     name = "Subscribe"
