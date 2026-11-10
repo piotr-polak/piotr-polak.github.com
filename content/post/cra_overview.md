@@ -47,7 +47,7 @@ The "core functionality" of the product determines the product classification. M
 
 There are two classes of "important products" listed by the regulation: Class I and Class II, plus additional group of "critical products".
 
-{{< figure src="/images/cra_product_classes.png" >}}
+{{< figure src="/images/cra_product_classes.png" alt="CRA products fall into the default category, important products (Class I or Class II), or critical products." >}}
 
 
 ## Conformity assessment {#conformity-assessment}

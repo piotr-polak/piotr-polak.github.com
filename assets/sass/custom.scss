@@ -1,21 +1,45 @@
-h1 { font-size: 1.2rem }
+header .h2 {
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: normal;
 
-#content > div.container {
-    h2 {
+    a, a:hover {
+        color: inherit;
+    }
+}
+
+a {
+    color: #006bdc;
+}
+
+.text-muted {
+    color: #626b73 !important;
+}
+
+#content > main.container {
+    h1, h2, h3 {
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: normal;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    h2:not(.h5) {
         margin-top: 2rem;
         margin-bottom: 0.75rem;
         font-size: 1.5rem;
         line-height: 1.3;
-        letter-spacing: -0.025rem;
     }
 
-    // Devise marks article titles with mb-0; keep their existing title styling.
-    h3:not(.mb-0) {
+    h3 {
         margin-top: 1.25rem;
         margin-bottom: 0.4rem;
         font-size: 1.125rem;
         line-height: 1.4;
-        letter-spacing: normal;
     }
 }
 

@@ -2,6 +2,7 @@
 title = "Cyber Resilience Act: Reporting Obligations"
 author = ["Piotr Polak"]
 date = 2026-01-02T00:00:00+01:00
+lastmod = 2026-11-10
 categories = ["Regulations", "Cybersecurity"]
 draft = false
 description = "CRA reporting obligations from 11 September 2026: what to report, the 24-hour and 72-hour notifications, and the different final-report deadlines for vulnerabilities and severe incidents."
