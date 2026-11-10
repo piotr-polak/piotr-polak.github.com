@@ -4,12 +4,12 @@ author = ["Piotr Polak"]
 date = 2026-01-02T00:00:00+01:00
 categories = ["Regulations", "Cybersecurity"]
 draft = false
-description = "How CRA reporting obligations work from 11 September 2026: what counts as an actively exploited vulnerability or severe incident, the 24h/72h/14-day deadlines, and how manufacturers can prepare."
+description = "CRA reporting obligations from 11 September 2026: what to report, the 24-hour and 72-hour notifications, and the different final-report deadlines for vulnerabilities and severe incidents."
 +++
 
 *Update (2 October 2026): the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>) is now operational.*
 
-Since 11 September 2026, the reporting obligations of manufacturers required by the Cyber Resilience Act are enforced.
+The manufacturer reporting obligations under [Article 14 of the Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) have applied since 11 September 2026.
 
 
 ## Reporting Process {#reporting-process}
@@ -23,14 +23,22 @@ Manufacturers must report ****actively exploited vulnerabilities**** and ****sev
 : A flaw that has been reliably proven to be exploited by a malicious actor without the system owner's permission.
 
 ****Severe incident****
-: An event that negatively affects—or could affect—the product's ability to protect the availability, authenticity, integrity, or confidentiality of its data or functions.
+: An incident that negatively affects—or could negatively affect—the product's ability to protect the availability, authenticity, integrity, or confidentiality of sensitive or important data or functions. An incident is also severe if it has led—or could lead—to the introduction or execution of malicious code in the product or in a user's network and information systems.
 
 
 ### Reporting Deadlines {#reporting-deadlines}
 
-1.  ****Initial report****: Within 24 hours of awareness (early warning)
-2.  ****Full report****: Within 72 hours
-3.  ****Final report****: Within 14 days of implementing a corrective measure
+For both actively exploited vulnerabilities and severe incidents, manufacturers must submit:
+
+1.  ****Early warning****: Without undue delay and no later than 24 hours after becoming aware of the vulnerability or incident.
+2.  ****Vulnerability or incident notification****: Without undue delay and no later than 72 hours after becoming aware of it, providing the information available at that stage, including any corrective or mitigating measures.
+
+The ****final-report deadline**** depends on what is being reported:
+
+-   ****Actively exploited vulnerability****: No later than 14 days after a corrective or mitigating measure is available—not after users have implemented it.
+-   ****Severe incident****: Within one month after submitting the incident notification described above.
+
+The 72-hour notification and final report are required unless the relevant information has already been provided. The coordinating CSIRT may also request an intermediate status report.
 
 
 ### Submission Platform {#submission-platform}
@@ -41,8 +49,9 @@ Manufacturers must report ****actively exploited vulnerabilities**** and ****sev
 
 ### Distribution {#distribution}
 
--   Notifications will be forwarded to a ****coordinating CSIRT**** designated by ENISA
--   Shared with relevant ****CSIRTs**** in all EU member states where the products are available
+-   Manufacturers notify the ****CSIRT designated as coordinator**** and ****ENISA**** simultaneously through the platform.
+-   Manufacturers with a main establishment in the EU use the endpoint of the coordinating CSIRT in that Member State. Article 14(7) sets out the selection rules for manufacturers without a main establishment in the EU.
+-   The coordinating CSIRT handles onward sharing with other relevant coordinating CSIRTs under Article 16, including the rules on delaying dissemination of sensitive notifications.
 
 
 ## Preparing for Reporting Obligations {#preparing-for-reporting-obligations}
@@ -62,10 +71,8 @@ Manufacturers should:
 ****Prepare Reporting Procedures****
 
 -   Set up processes to submit reports through the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), operational since 11 September 2026.
--   Ensure reports can meet the required timelines:
-    -   Initial report: within 24 hours of awareness
-    -   Full report: within 72 hours
-    -   Final report: within 14 days of applying corrective measures
+-   Build the [reporting deadlines](#reporting-deadlines) into your response procedures: early warning within 24 hours and notification within 72 hours of awareness, both without undue delay.
+-   Track the final-report trigger separately: availability of a corrective or mitigating measure for vulnerabilities; submission of the incident notification for severe incidents.
 
 ****Train Teams and Assign Responsibilities****
 

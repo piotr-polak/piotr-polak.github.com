@@ -1,18 +1,22 @@
 +++
-title = "RED Delegated Act is Repealed"
+title = "RED Delegated Act: Repeal Takes Effect in December 2027"
 author = ["Piotr Polak"]
 date = 2026-02-17T00:00:00+01:00
+lastmod = 2026-11-10
 categories = ["Regulations"]
 draft = false
-description = "The EU Commission adopted the repeal of the RED Delegated Act: it stops applying when the Cyber Resilience Act becomes fully applicable on 11 December 2027."
+description = "Delegated Regulation (EU) 2026/339 repeals the RED cybersecurity Delegated Act from 11 December 2027. Earlier equipment remains subject to surveillance of the requirements that applied when it was placed on the market."
 +++
 
-The decision by the EU Commission to repeal RED DA once the Cyber Resilience Act becomes fully applicable on 11 December 2027 is adopted: [Delegated Regulation](<https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14766-Cyb%5B%E2%80%A6%5Dated-Regulation-supplementing-the-Radio-Equipment-Directive_en>)
+The European Commission adopted [Delegated Regulation (EU) 2026/339](<https://eur-lex.europa.eu/eli/reg_del/2026/339/oj/eng>) on **16 February 2026**. Published in the Official Journal on 29 April 2026, it repeals the RED cybersecurity Delegated Act—Delegated Regulation (EU) 2022/30—with effect from **11 December 2027**, when the main CRA requirements apply.
 
 
 ## What this means for manufacturers
 
-Nothing changes until 11 December 2027: radio equipment still needs to meet the RED DA security requirements, with EN 18031 as the route to presumption of conformity.
-From that date the CRA takes over, so manufacturers should plan the transition of their assessments and documentation accordingly.
+Until 11 December 2027, radio equipment in scope must still meet the applicable RED DA cybersecurity requirements. The EN 18031 series provides a route to presumption of conformity, subject to the [restrictions in its Official Journal citations](<https://eur-lex.europa.eu/eli/dec_impl/2025/138/oj/eng>).
+
+The repeal does not remove the other requirements of the Radio Equipment Directive. It also does not end market surveillance of compliance with the RED DA requirements for equipment placed on the market between **1 August 2025 and 10 December 2027**, as recital 5 of the repeal regulation makes clear.
+
+Manufacturers should plan the transition of their assessments and documentation for products placed on the market from 11 December 2027. Under Article 69 of the CRA, products placed on the market before that date generally become subject to its requirements only if substantially modified from that date; the Article 14 reporting obligations already apply to earlier products in scope.
 
 For a comparison of the two regulations, see [RED Delegated Act vs Cyber Resilience Act]({{< relref "post/red_da_vs_cra" >}}).
