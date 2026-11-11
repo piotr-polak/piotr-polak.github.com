@@ -32,7 +32,7 @@ These articles walk through the regulation from the manufacturer's perspective:
 -   [RED Delegated Act vs Cyber Resilience Act]({{< relref "post/red_da_vs_cra" >}}) -
     how the two regulations differ in scope, protected assets, and requirements
 -   [CRA Guidance: Public Consultation Closed]({{< relref "post/cra_guidance_open_consultation" >}}) -
-    the draft Commission guidance and the consultation that ended on 13 April 2026
+    the consultation on the draft guidance, and the guidance the Commission published on 27 July 2026
 -   [RED Delegated Act: Repeal Takes Effect in December 2027]({{< relref "post/red_da_repealed" >}}) -
     the adopted repeal and the transition from the RED DA to the CRA
 -   [Webinar | CRA: The Manufacturer's Perspective]({{< relref "post/cra_webinar" >}}) -

@@ -43,7 +43,7 @@ The support period must reflect the time the product is expected to be used and 
 
 ## Product classification {#product-classification}
 
-The "core functionality" of the product determines the product classification. Majority of the products in scope of the CRA belong to the "default" class. These are all products categories that are not explicitly mentioned by the CRA as important or critical products.
+The "core functionality" of the product determines the product classification. Most products in scope of the CRA belong to the "default" class: all product categories that the CRA does not list as important or critical products.
 
 There are two classes of "important products" listed by the regulation: Class I and Class II, plus additional group of "critical products".
 
@@ -77,7 +77,7 @@ Under Article 27, conformity with a harmonized standard provides **presumption o
 
 ## Product evaluation flow {#product-evaluation-flow}
 
-The first step in the product evaluation is the definition of the ****core functionality**** of the product. This important step determines the class of the product and what assessment module can be followed but also what specifications can be considered applicable.
+The first step in the product evaluation is the definition of the **core functionality** of the product. This important step determines the class of the product and what assessment module can be followed but also what specifications can be considered applicable.
 
 After identifying the product class, determine which standards, common specifications, or certification schemes cover the applicable requirements. Their availability and application can affect the assessment route, particularly for Class I products.
 
