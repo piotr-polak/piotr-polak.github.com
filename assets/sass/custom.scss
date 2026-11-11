@@ -246,7 +246,7 @@ article table {
     }
 }
 
-/* Main menu: 15px semibold links (14px on phones), current page dark with a bar under it */
+/* Main menu: 15px semibold links (14px on phones); an amber bar under the current page and on hover */
 #nav-links {
     display: flex;
     flex-wrap: wrap;
@@ -261,14 +261,15 @@ article table {
         font-weight: 600;
         text-decoration: none;
 
-        &:hover {
-            text-decoration: underline;
+        /* Hover shows the same amber bar as the current page */
+        &:hover,
+        &.active {
+            text-decoration: none;
+            box-shadow: inset 0 -3px 0 var(--signal);
         }
 
         &.active {
             color: var(--fg);
-            text-decoration: none;
-            box-shadow: inset 0 -3px 0 var(--signal);
         }
 
         &:focus-visible {
