@@ -51,6 +51,27 @@ body {
     color: var(--fg);
 }
 
+/* Footer: clear space above it, and at the bottom of the window on short pages
+   (replaces the theme's min-height, which assumed a fixed footer height) */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1 0 auto;
+    min-height: 0;
+}
+
+body > footer {
+    margin-top: 3rem;
+
+    @media (max-width: 575.98px) {
+        margin-top: 2.5rem;
+    }
+}
+
 a:hover {
     color: var(--link-hover);
 }
