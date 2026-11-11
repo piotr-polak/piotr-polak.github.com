@@ -5,6 +5,11 @@ url = "/cra/standards/"
 draft = false
 layout = "standards"
 description = "Where each harmonised standard for the EU Cyber Resilience Act stands: the horizontal EN 40000-1 series and the vertical standards for important and critical products, with their stage in CEN, CENELEC and ETSI."
+
+# A child of "CRA guide" so that menu item shows as current on this page; the menu only renders top-level items
+[menus.main]
+  name = "Standards tracker"
+  parent = "cra"
 +++
 
 Harmonised standards are how most manufacturers will show that a product meets the [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) essential requirements. Once a standard is cited in the Official Journal of the EU, applying it gives a presumption of conformity with the requirements it covers (Article 27). For important products in Class I, a fully applied cited standard also opens the internal-control route (module A).

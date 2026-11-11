@@ -9,6 +9,18 @@
             </small>
         </div>
 
+        <div class="toc mb-4">
+            <h2 class="h5" id="toc-title"><span class="badge category">Contents</span></h2>
+            <nav id="TableOfContents" aria-labelledby="toc-title">
+                <ul>
+                    {{ range $data.groups }}
+                    <li><a href="#{{ .id }}">{{ .title }}</a> <span class="text-muted">({{ len .standards }})</span></li>
+                    {{ end }}
+                    <li><a href="#sources">Sources</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <article>
             {{ .Content }}
 
