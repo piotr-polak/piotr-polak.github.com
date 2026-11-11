@@ -58,18 +58,18 @@ copyright = "© 2026 Piotr Polak"
     fontColor = "#212529"
   [[params.social]]
     name = "GitHub"
-    fa_icon = "fab fa-github fa-1x"          # Font Awesome icon class
+    icon = "github"                          # SVG file in assets/icons/
     href = "https://github.com/piotr-polak"  # Link to associate with icon (http://, https://, mailto:)
   [[params.social]]
     name = "LinkedIn"
-    fa_icon = "fab fa-linkedin-in fa-1x"
+    icon = "linkedin"
     href = "https://linkedin.com/in/piotrpolak"
 #  [[params.social]]
-#    fa_icon = "fab fa-x-twitter fa-1x"
+#    icon = "x"
 #    href = "https://x.com/piotrpolak/"
   [[params.social]]
     name = "Email"
-    fa_icon = "fas fa-envelope fa-1x"
+    icon = "email"
     href = "mailto:contact@piotrpolak.com"
 
 #Image cache

@@ -50,11 +50,13 @@
                 {{ end }}
             </ul>
             </nav>
-            <ul id="nav-social" class="list-inline">
+            <ul id="nav-social" class="list-unstyled">
                 {{ range .Site.Params.social }}
-                    <li class="list-inline-item mr-3">
-                        <a href="{{ .href | safeURL }}" target="_blank" aria-label="{{ .name }}">
-                            <i class="{{ .fa_icon }} text-muted" aria-hidden="true"></i>
+                    {{ $icon := resources.Get (printf "icons/%s.svg" .icon) }}
+                    {{ if not $icon }}{{ errorf "params.social %q: assets/icons/%s.svg not found" .name .icon }}{{ end }}
+                    <li>
+                        <a href="{{ .href | safeURL }}"{{ if hasPrefix .href "http" }} target="_blank"{{ end }}>
+                            {{ $icon.Content | strings.TrimSpace | safeHTML }}{{ .name }}
                         </a>
                     </li>
                 {{ end }}

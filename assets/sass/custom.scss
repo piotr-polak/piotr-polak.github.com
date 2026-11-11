@@ -65,3 +65,40 @@ article table {
         border-bottom: 2px solid #dee2e6;
     }
 }
+
+/* Labelled GitHub, LinkedIn, and email links under the main menu */
+#nav-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 2rem;
+        color: #626b73;
+        font-size: 0.875rem;
+
+        &:hover {
+            color: #006bdc;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #006bdc;
+            outline-offset: 2px;
+        }
+    }
+
+    svg {
+        flex: none;
+        width: auto;
+        height: 1rem;
+        fill: currentColor;
+    }
+
+    /* The header is centred below Bootstrap's sm breakpoint */
+    @media (max-width: 575.98px) {
+        justify-content: center;
+    }
+}
