@@ -19,7 +19,7 @@ Under Article 69, products placed on the market before 11 December 2027 generall
 
 ## Standards
 
-Harmonised standards give a presumption of conformity once they are cited in the Official Journal of the EU. None is cited yet: the horizontal EN 40000-1 series is approved or in its formal vote, and most product-specific standards are in enquiry or approval. The [CRA Standards Tracker]({{< relref "cra-standards" >}}) shows where each of the requested standards stands.
+Harmonized standards give a presumption of conformity once they are cited in the Official Journal of the EU. None is cited yet: the horizontal EN 40000-1 series is approved or in its formal vote, and most product-specific standards are in enquiry or approval. The [CRA Standards Tracker]({{< relref "cra-standards" >}}) shows where each of the requested standards stands.
 
 ## Reading guide
 

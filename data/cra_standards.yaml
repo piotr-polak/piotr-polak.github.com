@@ -1,6 +1,6 @@
 # CRA standards tracker (content/cra-standards.md). Edit this file to update the page.
 # stage: drafting | enquiry | approval | approved | cited
-# item: line in standardisation request M/606 (Commission Implementing Decision C(2025) 618)
+# item: line in standardization request M/606 (Commission Implementing Decision C(2025) 618)
 # oj: false when the CEN-CENELEC project page or the committee says no citation in the Official Journal is expected
 as_of: "2026-11-11"
 
@@ -66,7 +66,7 @@ groups:
 
   - id: class-1
     title: Important products, Class I
-    intro: Vertical standards for the Annex III Class I categories. With a cited harmonised standard fully applied, these products can use internal control (module A).
+    intro: Vertical standards for the Annex III Class I categories. With a cited harmonized standard fully applied, these products can use internal control (module A).
     standards:
       - ref: prEN 40000-10
         title: Identity management and privileged access management, including access control readers
