@@ -7,9 +7,47 @@
     the <a href="https://csa-iot.org/">Connectivity Standards Alliance</a>, and
     the <a href="https://www.itu.int/en/Pages/default.aspx">International Telecommunication Union</a>.</p>
 
-    <p>New to the CRA? <a href="/cra/">Start with the Cyber Resilience Act guide</a>.
-    Following the CRA standards? <a href="/cra/standards/">See where each one stands</a> in the standards tracker.</p>
-
-    <p>Learn more <a href="/about/">about my work</a>, <a href="/contact/">get in touch</a>,
-    or <a href="/index.xml">subscribe via RSS</a> for new articles.</p>
+    {{- /* Start here: the CRA guide and the standards tracker, each with one line of facts.
+           The tracker's stage counts come from data/cra_standards.yaml, so they follow each update. */}}
+    {{- $data := site.Data.cra_standards }}
+    {{- $count := 0 }}
+    {{- $stages := dict }}
+    {{- range $data.groups }}
+        {{- range .standards }}
+            {{- $count = add $count 1 }}
+            {{- $stages = merge $stages (dict .stage (add (index $stages .stage | default 0) 1)) }}
+        {{- end }}
+    {{- end }}
+    {{- $approved := index $stages "approved" | default 0 }}
+    {{- $cited := index $stages "cited" | default 0 }}
+    <h2 class="h5 mt-4"><span class="badge category">Start here</span></h2>
+    <div class="start-here">
+        <a class="start-row" href="/cra/">
+            <span class="start-title">CRA guide</span>
+            <span class="start-desc">What the CRA requires and which articles to read next.</span>
+            <span class="start-facts">
+                <span>Reporting since <strong>11 Sep 2026</strong></span>
+                <span class="start-sep" aria-hidden="true">·</span>
+                <span>Main requirements from <strong>11 Dec 2027</strong></span>
+            </span>
+            <span class="start-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="start-row" href="/cra/standards/">
+            <span class="start-title">CRA standards tracker</span>
+            <span class="start-desc">Where all {{ $count }} CRA standards stand, from first draft to citation in the Official Journal.</span>
+            <span class="start-facts">
+                <span class="stage-bar" aria-hidden="true">
+                    {{- range $stage := slice "drafting" "enquiry" "approval" "approved" "cited" }}
+                        {{- with index $stages $stage }}<i class="bar-{{ $stage }}" style="flex: {{ . }}"></i>{{ end }}
+                    {{- end -}}
+                </span>
+                {{- if eq $cited 0 }}
+                <span>{{ $approved }} approved, <strong>none cited in the OJ yet</strong></span>
+                {{- else }}
+                <span>{{ $approved }} approved, <strong>{{ $cited }} cited in the OJ</strong></span>
+                {{- end }}
+            </span>
+            <span class="start-arrow" aria-hidden="true">→</span>
+        </a>
+    </div>
 </div>
