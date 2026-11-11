@@ -1,6 +1,25 @@
-/* Colours: navy accent, with a dark palette that follows the reader's system setting */
+/* Colours: navy accent, with a dark palette that follows the reader's system setting
+   unless they pick one with the footer theme control (data-theme on <html>) */
+@mixin dark-palette {
+    color-scheme: dark;
+    --bg: #17191c;
+    --fg: #e4e6e9;
+    --muted: #9aa3ab;
+    --link: #8ab4f8;
+    --link-hover: #aecbfa;
+    --accent: #8ab4f8;
+    --badge: #2b4166;
+    --badge-fg: #e4e6e9;
+    --rule: #33383e;
+    --rule-strong: #454b52;
+    --hr: rgba(138, 180, 248, 0.3);
+    --avatar-ring: #2a2e33;
+    --figure-panel: #f5f5f5;
+    --figure-pad: 0.75rem;
+}
+
 :root {
-    color-scheme: light dark;
+    color-scheme: light;
     --bg: #f5f5f5;
     --fg: #212529;
     --muted: #626b73;
@@ -14,24 +33,17 @@
     --hr: rgba(29, 53, 87, 0.35);
     --avatar-ring: #ffffff;
     --figure-panel: transparent;
+    --figure-pad: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #17191c;
-        --fg: #e4e6e9;
-        --muted: #9aa3ab;
-        --link: #8ab4f8;
-        --link-hover: #aecbfa;
-        --accent: #8ab4f8;
-        --badge: #2b4166;
-        --badge-fg: #e4e6e9;
-        --rule: #33383e;
-        --rule-strong: #454b52;
-        --hr: rgba(138, 180, 248, 0.3);
-        --avatar-ring: #2a2e33;
-        --figure-panel: #f5f5f5;
+    :root:not([data-theme="light"]) {
+        @include dark-palette;
     }
+}
+
+:root[data-theme="dark"] {
+    @include dark-palette;
 }
 
 body {
@@ -58,14 +70,9 @@ hr {
 
 /* Diagrams sit on a light panel in dark mode, so their edges and dark labels stay legible */
 #content > main.container figure img[src$=".png"] {
+    padding: var(--figure-pad);
     background-color: var(--figure-panel);
     border-radius: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    #content > main.container figure img[src$=".png"] {
-        padding: 0.75rem;
-    }
 }
 
 header .h2 {
@@ -334,5 +341,66 @@ article table {
 
     #nav-social {
         margin-bottom: 0;
+    }
+}
+
+/* Footer theme control: Auto / Light / Dark, the current one bold with an accent border */
+#theme-switch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+    font-size: 0.8125rem;
+
+    &[hidden] {
+        display: none;
+    }
+
+    > span {
+        margin-right: 0.35rem;
+    }
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        min-height: 1.75rem;
+        padding: 0.15rem 0.65rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: 999px;
+        background: none;
+        color: var(--muted);
+        font: inherit;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--link);
+        }
+
+        &[aria-pressed="true"] {
+            border-color: var(--accent);
+            color: var(--fg);
+            font-weight: 600;
+        }
+
+        /* Keep the keyboard focus ring, drop Bootstrap's ring after a mouse click */
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--link);
+            outline-offset: 2px;
+        }
+    }
+
+    svg {
+        flex: none;
+        width: auto;
+        height: 0.85rem;
+        fill: currentColor;
     }
 }

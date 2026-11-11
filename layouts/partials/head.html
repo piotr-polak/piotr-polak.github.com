@@ -35,6 +35,40 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#17191c" media="(prefers-color-scheme: dark)">
+    {{/* Theme control in the footer: Auto (follow the system, the default), Light or Dark.
+         Runs before the stylesheets so a saved choice applies without a flash. */}}
+    <script>
+    (() => {
+        const root = document.documentElement;
+        const metas = document.querySelectorAll('meta[name="theme-color"]');
+        const [lightBar, darkBar] = [...metas].map((m) => m.content);
+        const sync = () => {
+            const s = root.dataset.theme || "auto";
+            metas.forEach((m, i) => (m.content = s === "auto" ? [lightBar, darkBar][i] : s === "dark" ? darkBar : lightBar));
+            const sw = document.getElementById("theme-switch");
+            if (!sw) return;
+            sw.hidden = false;
+            sw.querySelectorAll("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themeChoice === s));
+        };
+        try {
+            const saved = localStorage.getItem("theme");
+            if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+        } catch (e) {}
+        sync();
+        document.addEventListener("DOMContentLoaded", sync);
+        document.addEventListener("click", (e) => {
+            const s = e.target.closest("#theme-switch [data-theme-choice]")?.dataset.themeChoice;
+            if (!s) return;
+            try {
+                if (s === "auto") localStorage.removeItem("theme");
+                else localStorage.setItem("theme", s);
+            } catch (e) {}
+            if (s === "auto") delete root.dataset.theme;
+            else root.dataset.theme = s;
+            sync();
+        });
+    })();
+    </script>
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="{{ .Site.Title }}">
 
     {{/* Adds complete override capability */}}
