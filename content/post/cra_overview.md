@@ -45,9 +45,60 @@ The support period must reflect the time the product is expected to be used and 
 
 The "core functionality" of the product determines the product classification. Most products in scope of the CRA belong to the "default" class: all product categories that the CRA does not list as important or critical products.
 
-There are two classes of "important products" listed by the regulation: Class I and Class II, plus additional group of "critical products".
+Annex III of the CRA lists the "important products" in two classes, Class I and Class II, and Annex IV lists the "critical products". The class decides which [conformity assessment](#conformity-assessment) routes are available; every product in scope must meet the same essential cybersecurity requirements.
 
 {{< figure src="/images/cra_product_classes.png" alt="CRA products fall into the default category, important products (Class I or Class II), or critical products." >}}
+
+
+### Important and critical product categories {#product-categories}
+
+**Important products, Class I** (Annex III):
+
+-   Identity management systems and privileged access management software and hardware, including authentication and access control readers and biometric readers
+-   Standalone and embedded browsers
+-   Password managers
+-   Software that searches for, removes, or quarantines malicious software
+-   Products with the function of a virtual private network (VPN)
+-   Network management systems
+-   Security information and event management (SIEM) systems
+-   Boot managers
+-   Public key infrastructure and digital certificate issuance software
+-   Physical and virtual network interfaces
+-   Operating systems
+-   Routers, modems intended for connection to the internet, and switches
+-   Microprocessors with security-related functionalities
+-   Microcontrollers with security-related functionalities
+-   Application-specific integrated circuits (ASIC) and field-programmable gate arrays (FPGA) with security-related functionalities
+-   Smart home general purpose virtual assistants
+-   Smart home products with security functionalities, including smart door locks, security cameras, baby monitoring systems and alarm systems
+-   Internet-connected toys with social interactive features (such as speaking or filming) or location tracking features
+-   Personal wearables with a health monitoring purpose that are not medical devices, and personal wearables intended for children
+
+**Important products, Class II** (Annex III):
+
+-   Hypervisors and container runtime systems
+-   Firewalls, intrusion detection and prevention systems
+-   Tamper-resistant microprocessors
+-   Tamper-resistant microcontrollers
+
+**Critical products** (Annex IV):
+
+-   Hardware devices with security boxes
+-   Smart meter gateways and other devices for advanced security purposes, including secure cryptoprocessing
+-   Smartcards or similar devices, including secure elements
+
+The [CRA standards tracker]({{< relref "cra-standards" >}}) lists the vertical standards being developed for these categories.
+
+
+### Technical descriptions {#technical-descriptions}
+
+[Commission Implementing Regulation (EU) 2025/2392](<https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng>), in force since 21 December 2025, gives a technical description of each category, with examples that are illustrative and not exhaustive. It sets out how to read them:
+
+-   **The product as a whole counts.** A product is important or critical only if the product as a whole has the core functionality of a listed category. Integrating a component that falls into a category does not in itself change the class of the final product (for important products, CRA Article 7(1)). For example, the regulation names Wi-Fi, Bluetooth and Zigbee adapters and controllers as physical network interfaces (Class I), but a connected device that integrates one does not become an important product because of it.
+-   **Being able to perform a function is not enough.** A product whose core functionality is different does not meet a category's description, even if it can do what that category does. The regulation's examples: a smartphone is generally not an operating system or a password manager, and security orchestration (SOAR) software is generally not a SIEM.
+-   **Extra functions do not take a product out of a category.** An operating system that ships with a calculator or a simple graphics editor is still an operating system.
+
+Some descriptions draw sharper lines than the category names. Tamper-resistant microprocessors and microcontrollers (Class II) are designed for protection at AVA_VAN level 2 or 3 under the Common Criteria, while secure elements (critical) are designed for at least AVA_VAN.4. A toy that only detects the proximity of its user or of other toys does not have location tracking features, and wearables for children cover users under 14.
 
 
 ## Conformity assessment {#conformity-assessment}
@@ -94,6 +145,7 @@ The standards being developed by [CEN-CENELEC](<https://www.cencenelec.eu/news-e
 ## Relevant links {#relevant-links}
 
 -   [Cyber Resilience Act legal text](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
+-   [Implementing Regulation (EU) 2025/2392: technical descriptions of important and critical products](<https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng>)
 -   [CRA Standardization Request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>)
 -   [CEN-CENELEC workshop: CRA and the horizontal standards](<https://www.cencenelec.eu/media/CEN-CENELEC/Events/Events/2025/2025-04-08_cyber-resilience-act-and-the-horizontal-standards-workshop.pdf>) (see slide 52 on the process standard)
 -   [Notified Bodies](<https://single-market-economy.ec.europa.eu/single-market/goods/building-blocks/notified-bodies_en>)
