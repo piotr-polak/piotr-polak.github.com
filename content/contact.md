@@ -2,7 +2,6 @@
 title = "Contact"
 author = ["Piotr"]
 date = 2025-09-16
-tags = ["contact"]
 draft = false
 description = "Contact Piotr Polak for speaking engagements, standardization cooperation, or advice on product security compliance."
 +++

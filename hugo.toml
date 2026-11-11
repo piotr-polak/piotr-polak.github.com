@@ -1,12 +1,33 @@
 baseURL = "https://www.piotrpolak.com"
 title = "Piotr Polak | Cybersecurity and standardization expert"
 languageCode = "en-us"
-theme = "devise"
 relativeURLs = false
 enableEmoji = true
 googleAnalytics = ""
 enableRobotsTXT = true
 copyright = "© 2026 Piotr Polak"
+
+# The devise theme, mounted without its Font Awesome webfonts: the site's icons are inline SVGs
+[module]
+  [[module.imports]]
+    path = "devise"
+    [[module.imports.mounts]]
+      source = "archetypes"
+      target = "archetypes"
+    [[module.imports.mounts]]
+      source = "assets"
+      target = "assets"
+    [[module.imports.mounts]]
+      source = "layouts"
+      target = "layouts"
+    [[module.imports.mounts]]
+      source = "static"
+      target = "static"
+      excludeFiles = ["webfonts", "webfonts/**"]
+
+# Categories only; the site does not use tags
+[taxonomies]
+  category = "categories"
 
 # Main menu items
 [menu]

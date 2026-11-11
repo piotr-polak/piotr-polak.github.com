@@ -2,7 +2,6 @@
 title = "About"
 author = ["Piotr"]
 date = 2025-09-16
-tags = ["about"]
 draft = false
 layout = "about"
 description = "Piotr Polak is a cybersecurity and standardization expert with twenty years of experience at Philips, NXP, and Signify, contributing to product security standards at CEN-CENELEC, ETSI, the Connectivity Standards Alliance, and the ITU."
