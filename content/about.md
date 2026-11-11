@@ -8,7 +8,7 @@ layout = "about"
 description = "Piotr Polak is a cybersecurity and standardization expert with twenty years of experience at Philips, NXP, and Signify, contributing to product security standards at CEN-CENELEC, the Connectivity Standards Alliance, and the ITU."
 +++
 
-I help teams turn cybersecurity requirements into secure connected products and practical compliance processes.
+I help manufacturers turn cybersecurity requirements into secure connected products and practical compliance processes.
 
 Over the past twenty years, I have worked at Philips, NXP, and now Signify. My experience spans connected-product development, security architecture, and certification. Alongside that work, I contribute to product security standards through CEN-CENELEC, the Connectivity Standards Alliance (CSA), and the International Telecommunication Union (ITU).
 
