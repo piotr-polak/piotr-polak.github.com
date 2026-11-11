@@ -5,12 +5,12 @@ date = 2025-09-16
 tags = ["about"]
 draft = false
 layout = "about"
-description = "Piotr Polak is a cybersecurity and standardization expert with twenty years of experience at Philips, NXP, and Signify, contributing to product security standards at CEN-CENELEC, the Connectivity Standards Alliance, and the ITU."
+description = "Piotr Polak is a cybersecurity and standardization expert with twenty years of experience at Philips, NXP, and Signify, contributing to product security standards at CEN-CENELEC, ETSI, the Connectivity Standards Alliance, and the ITU."
 +++
 
 I help manufacturers turn cybersecurity requirements into secure connected products and practical compliance processes.
 
-Over the past twenty years, I have worked at Philips, NXP, and now Signify. My experience spans connected-product development, security architecture, and certification. Alongside that work, I contribute to product security standards through CEN-CENELEC, the Connectivity Standards Alliance (CSA), and the International Telecommunication Union (ITU).
+Over the past twenty years, I have worked at Philips, NXP, and now Signify. My experience spans connected-product development, security architecture, and certification. Alongside that work, I contribute to product security standards through CEN-CENELEC, ETSI, the Connectivity Standards Alliance (CSA), and the International Telecommunication Union (ITU).
 
 My current focus is the Cyber Resilience Act (CRA): contributing to its supporting standards at CEN-CENELEC and ETSI, and connecting regulatory requirements with engineering practice.
 
@@ -56,6 +56,10 @@ At CEN-CENELEC, I represent the Dutch national committee through the [Cybersecur
 - **JTC13:** Working on RED DA standards (WG 8) and CRA horizontal standards (WG 9).
 - **TC65X:** Working on CRA standards based on IEC 62443 (WG 3).
 - **TC205:** Focused on IT security for home and building systems (WG 20).
+
+### ETSI
+
+I act as liaison between CEN-CENELEC JTC13 WG 9 and ETSI. At ETSI, I contribute mainly to the CRA standard for smart home products with security functionalities, such as door locks, cameras, and alarms ([EN 304 632](https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74417)).
 
 ### Connectivity Standards Alliance
 
