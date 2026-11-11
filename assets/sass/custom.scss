@@ -102,3 +102,39 @@ article table {
         justify-content: center;
     }
 }
+
+/* Main menu: same small bold links, taller targets, current page dark with a bar under it */
+#nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.25rem;
+    left: 0;
+    margin-left: -0.5rem;
+
+    a {
+        padding: 0.65rem 0.5rem;
+        border-radius: 0;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.active {
+            color: #212529;
+            text-decoration: none;
+            box-shadow: inset 0 -2px 0 #212529;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #006bdc;
+            outline-offset: 0;
+        }
+    }
+
+    /* The header is centred below Bootstrap's sm breakpoint */
+    @media (max-width: 575.98px) {
+        justify-content: center;
+        margin-left: 0;
+    }
+}
