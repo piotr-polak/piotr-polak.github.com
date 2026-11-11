@@ -16,6 +16,8 @@
     --avatar-ring: #2a2e33;
     --figure-panel: #f5f5f5;
     --figure-pad: 0.75rem;
+    --stage-enquiry: #e0b35a;
+    --stage-approved: #7cc48f;
 }
 
 :root {
@@ -34,6 +36,8 @@
     --avatar-ring: #ffffff;
     --figure-panel: transparent;
     --figure-pad: 0;
+    --stage-enquiry: #8a5a00;
+    --stage-approved: #1e6b34;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -439,5 +443,102 @@ article table {
         width: auto;
         height: 0.85rem;
         fill: currentColor;
+    }
+}
+
+/* CRA standards tracker: stage pills, summary row, and tables that stack on phones */
+.standards-page {
+    .stage {
+        display: inline-block;
+        padding: 0 0.5rem;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.5;
+        white-space: nowrap;
+    }
+
+    .stage-drafting { color: var(--muted); }
+    .stage-enquiry { color: var(--stage-enquiry); }
+    .stage-approval { color: var(--link); }
+    .stage-approved { color: var(--stage-approved); }
+    .stage-cited { color: var(--fg); }
+
+    /* Quieter than the stage pills: a filled grey label under the reference */
+    .oj-tag {
+        display: inline-block;
+        margin-top: 0.3rem;
+        padding: 0 0.4rem;
+        border-radius: 0.25rem;
+        background-color: var(--rule);
+        color: var(--fg);
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.6;
+        white-space: nowrap;
+    }
+
+    .stage-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        margin: 1.5rem 0 0.5rem;
+        font-weight: 600;
+    }
+
+    .standards-table {
+        width: 100%;
+        font-size: 0.9375rem;
+        line-height: 1.45;
+
+        th, td {
+            vertical-align: top;
+        }
+
+        tbody th {
+            width: 30%;
+            border-bottom-width: 1px;
+            border-bottom-color: var(--rule);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td:last-child {
+            width: 30%;
+        }
+
+        .small {
+            margin-top: 0.15rem;
+            font-weight: 400;
+            white-space: normal;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .standards-table {
+            thead {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+            }
+
+            tr {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--rule);
+            }
+
+            tbody th,
+            td,
+            td:last-child {
+                display: block;
+                width: auto;
+                padding: 0 0 0.35rem;
+                border: 0;
+            }
+        }
     }
 }

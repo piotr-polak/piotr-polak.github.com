@@ -2,7 +2,7 @@
 title = "Cyber Resilience Act (CRA)"
 description = "A practical starting point for the EU Cyber Resilience Act: what it requires, key dates, and a reading guide to in-depth articles written from the manufacturer's perspective."
 date = 2026-10-02
-lastmod = 2026-11-10
+lastmod = 2026-11-11
 draft = false
 +++
 
@@ -16,6 +16,10 @@ The [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
     on the same date the RED Delegated Act is repealed
 
 Under Article 69, products placed on the market before 11 December 2027 generally become subject to the other CRA requirements only if substantially modified from that date. Article 14 reporting obligations are an exception and already apply to earlier products in scope.
+
+## Standards
+
+Harmonised standards give a presumption of conformity once they are cited in the Official Journal of the EU. None is cited yet: the horizontal EN 40000-1 series is approved or in its formal vote, and most product-specific standards are in enquiry or approval. The [CRA Standards Tracker]({{< relref "cra-standards" >}}) shows where each of the requested standards stands.
 
 ## Reading guide
 

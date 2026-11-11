@@ -2,7 +2,7 @@
 title = "EN 40000-1-2: CRA Process Standard Approved"
 author = ["Piotr Polak"]
 date = 2026-10-02T00:00:00+02:00
-lastmod = 2026-11-10
+lastmod = 2026-11-11
 categories = ["Regulations"]
 draft = false
 description = "EN 40000-1-2, the horizontal Cyber Resilience Act process standard covering cybersecurity principles, product risk management, and lifecycle activities, has been approved by the CEN-CENELEC formal vote with 100 percent of votes in favour."
@@ -37,6 +37,8 @@ making it the practical reference for building and demonstrating CRA-ready proce
 
 If you are preparing for the CRA, aligning your product security processes with EN 40000-1-2 is the most direct route:
 when published, it is likely to become the benchmark for CRA process readiness against which your processes are compared.
+
+To follow the other CRA standards, including vulnerability handling (EN 40000-1-3) and the product-specific standards, see the [CRA Standards Tracker]({{< relref "cra-standards" >}}).
 
 For background on the regulation itself, see the [Cyber Resilience Act guide]({{< relref "cra" >}})
 and [Cyber Resilience Act: an Overview]({{< relref "post/cra_overview" >}}).

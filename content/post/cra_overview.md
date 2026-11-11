@@ -2,7 +2,7 @@
 title = "Cyber Resilience Act: an Overview"
 author = ["Piotr Polak"]
 date = 2025-09-07
-lastmod = 2026-11-10
+lastmod = 2026-11-11
 categories = ["Regulations", "Cybersecurity"]
 draft = false
 description = "What the EU Cyber Resilience Act requires of products with digital elements: scope, product classes, conformity assessment, and manufacturer obligations, explained from a manufacturer's perspective."
@@ -68,7 +68,7 @@ Manufacturers remain responsible for compliance, including drawing up the EU dec
 
 ## Standards {#standards}
 
-A number of CRA related standards were requested to be developed in the [standardization request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>) targeted at [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). This includes three "horizontal" standards addressing process, vulnerabilities handling and catalog of controls plus a number of "vertical" standards requested for each of the important product classes.
+A number of CRA related standards were requested to be developed in the [standardization request](<https://ec.europa.eu/growth/tools-databases/enorm/mandate/606_en>) targeted at [CEN-CENELEC](<https://www.cencenelec.eu/news-events/news/2025/newsletter/ots-62-cra/>) and [ETSI](<https://www.etsi.org/newsroom/press-releases/2545-etsi-leverages-global-technical-expertise-to-support-the-eu-cyber-resilience-act>). This includes three "horizontal" standards addressing process, vulnerabilities handling and catalog of controls plus a number of "vertical" standards requested for each of the important product classes. The [CRA Standards Tracker]({{< relref "cra-standards" >}}) shows the current stage of each one.
 
 These standards serve different roles. [EN 40000-1-2]({{< relref "post/en_40000_1_2_approved" >}}) provides a framework for cybersecurity principles, risk management, and lifecycle activities; it is not intended to provide presumption of conformity. The vulnerability-handling and product-specific standards are being developed to support assessment against the relevant CRA requirements.
 
