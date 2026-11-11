@@ -1,0 +1,9 @@
+{{/* Share card for og:image: assets/images/share-card-base.png (background, avatar, name, domain)
+     with the page title drawn on it. The title wraps within share-card-title.png, a transparent
+     1040 px canvas, which is then laid on the base 80 px from the left. Returns a 1200x630 JPEG. */}}
+{{ $title := .Title }}
+{{ if .IsHome }}{{ $title = site.Params.share_title }}{{ end }}
+{{ $font := resources.Get "fonts/DejaVuSans-Bold.ttf" }}
+{{ $text := resources.Get "images/share-card-title.png" | images.Filter (images.Text $title (dict "font" $font "size" 68 "color" "#1d3557" "linespacing" 14 "x" 0 "y" 0)) }}
+{{ $card := resources.Get "images/share-card-base.png" | images.Filter (images.Overlay $text 80 222) }}
+{{ return $card.Process "jpg q85" }}

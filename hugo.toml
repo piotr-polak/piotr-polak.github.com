@@ -38,12 +38,13 @@ copyright = "© 2026 Piotr Polak"
   description = "Practical guidance on the EU Cyber Resilience Act, the RED Delegated Act, and product security standards, from a standardization expert with twenty years in connected product development."      # Your meta description of the site
   header_title = "Piotr Polak"               # Your header title
   header_subtitle = "Cybersecurity and standardization expert" # Your header subtitle
+  share_title = "Making sense of EU cybersecurity regulation" # Title on the home page's share card
 # home_image = "/images/avatar.png"          # Path to header image starting from the static directory (optional)
   home_image = "/avatar.png"                 # Path to header image starting from the static directory (optional)
   recent_posts = 5                           # Max amount of recent posts to show
   mainSections = ["posts", "post", "blog"]   # Main sections to include in recent posts
   [params.style]                             # CSS style overrides
-    backgroundColor = "#f5f5f5"
+    backgroundColor = "#f7f5f0"
     homeImageBorderColor = "#ffffff"
     fontFamilyBase = "system-ui, -apple-system, Segoe UI, Roboto"  # Each platform's UI font first
     fontColor = "#212529"

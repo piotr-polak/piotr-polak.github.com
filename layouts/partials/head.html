@@ -3,8 +3,10 @@
     {{ if not .IsHome }}{{ $title = printf "%s | %s" .Title .Site.Title }}{{ end }}
     {{ $description := .Site.Params.description }}
     {{ with .Description }}{{ $description = . }}{{ end }}
-    {{ $image := "avatar.png" | absURL }}
-    {{ with .Params.images }}{{ $image = index . 0 | absURL }}{{ end }}
+    {{/* Front matter images = ["/images/x.png"] replaces the generated share card */}}
+    {{ $card := "" }}
+    {{ $image := "" }}
+    {{ with .Params.images }}{{ $image = index . 0 | absURL }}{{ else }}{{ $card = partial "share-card.html" . }}{{ $image = $card.Permalink }}{{ end }}
     <title>{{ $title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +19,10 @@
     <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ $image }}">
+    {{ with $card }}
+    <meta property="og:image:width" content="{{ .Width }}">
+    <meta property="og:image:height" content="{{ .Height }}">
+    {{ end }}
     {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
     {{ if and (not .IsHome) (not .Date.IsZero) }}
     {{ $published := .Date.Format "2006-01-02T15:04:05Z07:00" }}
@@ -24,16 +30,15 @@
     <meta property="article:published_time" content="{{ $published }}">
     <meta property="article:modified_time" content="{{ $modified }}">
     {{ end }}
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ $image }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#17191c" media="(prefers-color-scheme: dark)">
     {{/* Theme control in the footer: Auto (follow the system, the default), Light or Dark.
          Runs before the stylesheets so a saved choice applies without a flash. */}}
