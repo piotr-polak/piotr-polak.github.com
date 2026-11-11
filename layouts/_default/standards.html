@@ -27,10 +27,16 @@
             {{/* Count the standards in each stage */}}
             {{ $all := slice }}
             {{ range $data.groups }}{{ $all = $all | append .standards }}{{ end }}
-            <ul class="stage-summary list-unstyled" aria-label="Standards by stage">
+            <h2 class="h5" id="stage-key"><span class="badge category">Stage key</span></h2>
+            <ul class="stage-key list-unstyled" aria-labelledby="stage-key">
                 {{ range $order }}
+                {{ $stage := index $data.stages . }}
                 {{ $n := len (where $all "stage" .) }}
-                <li><span class="stage stage-{{ . }}">{{ index $data.stages . }}</span> {{ $n }}</li>
+                <li>
+                    <span class="stage stage-{{ . }}">{{ $stage.label }}</span>
+                    <span class="stage-count">{{ $n }}<span class="sr-only"> {{ cond (eq $n 1) "standard" "standards" }}</span></span>
+                    <span class="stage-desc">{{ $stage.desc }}</span>
+                </li>
                 {{ end }}
             </ul>
 
@@ -56,7 +62,7 @@
                         </th>
                         <td>{{ .title }}</td>
                         <td>
-                            <span class="stage stage-{{ .stage }}">{{ index $data.stages .stage }}</span>
+                            <span class="stage stage-{{ .stage }}">{{ (index $data.stages .stage).label }}</span>
                             {{ with .note }}<span class="d-block text-muted small">{{ . }}</span>{{ end }}
                         </td>
                     </tr>

@@ -479,12 +479,50 @@ article table {
         white-space: nowrap;
     }
 
-    .stage-summary {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem 1.25rem;
-        margin: 1.5rem 0 0.5rem;
-        font-weight: 600;
+    /* Stage key: pill, count and meaning per row; on phones the meaning wraps under the pill */
+    .stage-key {
+        margin: 0 0 0.5rem;
+        font-size: 0.9375rem;
+        line-height: 1.45;
+
+        li {
+            display: grid;
+            grid-template-columns: 7rem 2rem 1fr;
+            align-items: baseline;
+            padding: 0.45rem 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        li:last-child {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .stage {
+            justify-self: start;
+        }
+
+        .stage-count {
+            font-weight: 600;
+            text-align: right;
+            padding-right: 0.75rem;
+        }
+
+        @media (max-width: 575.98px) {
+            li {
+                grid-template-columns: auto 1fr;
+                column-gap: 0.6rem;
+            }
+
+            .stage-count {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .stage-desc {
+                grid-column: 1 / -1;
+                margin-top: 0.25rem;
+            }
+        }
     }
 
     .standards-table {

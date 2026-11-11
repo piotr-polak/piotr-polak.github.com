@@ -4,12 +4,23 @@
 # oj: false when the CEN-CENELEC project page or the committee says no citation in the Official Journal is expected
 as_of: "2026-11-11"
 
+# label: the stage pill; desc: its line in the stage key above the tables
 stages:
-  drafting: Drafting
-  enquiry: Enquiry
-  approval: Approval
-  approved: Approved
-  cited: Cited in OJ
+  drafting:
+    label: Drafting
+    desc: The committee is writing the draft. It has not reached public enquiry or a formal vote.
+  enquiry:
+    label: Enquiry
+    desc: The draft is out for public enquiry, where national standards bodies comment on it, or the comments are being resolved.
+  approval:
+    label: Approval
+    desc: The draft is in its final approval step. In CEN-CENELEC this is the formal vote; ETSI runs a combined enquiry and vote, followed by final approval.
+  approved:
+    label: Approved
+    desc: The standards body has approved the standard and it is published or awaiting publication. Until it is cited in the Official Journal, it gives no presumption of conformity.
+  cited:
+    label: Cited in OJ
+    desc: The reference is published in the Official Journal of the EU. Applying the standard gives a presumption of conformity with the requirements it covers.
 
 groups:
   - id: horizontal
