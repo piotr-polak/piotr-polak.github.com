@@ -12,6 +12,7 @@
     --badge-fg: #e4e6e9;
     --rule: #33383e;
     --rule-strong: #454b52;
+    --divider: #5c636b;
     --hr: #f0b44c;
     --signal: #f0b44c;
     --avatar-ring: #2a2e33;
@@ -33,6 +34,7 @@
     --badge-fg: #f5f5f5;
     --rule: #dee2e6;
     --rule-strong: #ced4da;
+    --divider: #9aa1a8;
     --hr: #b87a00;
     --signal: #b87a00;
     --avatar-ring: #ffffff;
@@ -106,7 +108,7 @@ a:hover {
 /* Home page "Start here": the CRA guide and the standards tracker as index rows with one line of facts */
 .start-here {
     margin-bottom: 1.5rem;
-    border-top: 1px solid var(--rule-strong);
+    border-top: 1px solid var(--divider);
 }
 
 .start-row {
@@ -114,7 +116,7 @@ a:hover {
     grid-template-columns: 1fr auto;
     column-gap: 1rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--divider);
     color: var(--fg);
     text-decoration: none;
 
