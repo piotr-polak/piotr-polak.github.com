@@ -1,10 +1,8 @@
 # CRA standards tracker (content/cra-standards.md). Edit this file to update the page.
 # stage: drafting | enquiry | approval | approved | cited
 # item: line in standardisation request M/606 (Commission Implementing Decision C(2025) 618)
-# oj: true when a citation in the Official Journal is expected; set on a group, and on a standard to override its group
+# oj: false when the CEN-CENELEC project page or the committee says no citation in the Official Journal is expected
 as_of: "2026-11-11"
-# Date the vertical and OT rows were last checked against the work programmes
-verticals_checked: "2026-10-29"
 
 stages:
   drafting: Drafting
@@ -21,12 +19,14 @@ groups:
       - ref: EN 40000-1-1
         title: Vocabulary
         item: "–"
+        oj: false
         stage: approved
         note: Ratified 2 November 2026; publication planned for November 2026. Supporting standard, not requested by M/606.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:82349,25&cs=16635E5B87CB4221D8FFC1A74EC94EC6B
       - ref: EN 40000-1-2
         title: Principles, product risk management and lifecycle activities
         item: "#1"
+        oj: false
         stage: approved
         note: Ratified 2 November 2026; publication planned for November 2026.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:81335,25&cs=12AE5EC727F6FE08205C3342F485FB073
@@ -34,12 +34,12 @@ groups:
         title: Vulnerability handling
         item: "#15"
         stage: approval
-        oj: true
         note: Submitted for formal vote.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:81343,25&cs=15781C8F1FFD5C2E76320E51B347858F5
       - ref: prEN 40000-1-4
         title: Generic security requirements (Annex I, Part I)
         item: "#2–14"
+        oj: false
         stage: drafting
         note: Draft completed; publication planned for June 2027. M/606 deadline 30 October 2027.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:81344,25&cs=1A90D9968817B7D255241F6840183BB3A
@@ -47,19 +47,18 @@ groups:
   - id: class-1
     title: Important products, Class I
     intro: Vertical standards for the Annex III Class I categories. With a cited harmonised standard fully applied, these products can use internal control (module A).
-    oj: true
     standards:
       - ref: prEN 40000-10
         title: Identity management and privileged access management, including access control readers
         item: "#16"
         stage: approval
-        note: CEN/TC 224 WG 17. Formal vote planned 31 October 2026.
+        note: CEN/TC 224 WG 17. Formal vote was planned for 31 October 2026; no result published yet.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:82625,25&cs=18CD440E618B2A3F433698A3151057EDE
       - ref: EN 304 617
         title: Browsers
         item: "#17"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 5 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 5 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74408
       - ref: EN 304 618
         title: Password managers
@@ -76,20 +75,20 @@ groups:
       - ref: EN 304 620
         title: Virtual private networks (VPN)
         item: "#20"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 5 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 5 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74409
       - ref: EN 304 621
         title: Network management systems
         item: "#21"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 5 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 5 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74412
       - ref: EN 304 622
         title: Security information and event management (SIEM) systems
         item: "#22"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 5 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 5 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74413
       - ref: EN 304 623
         title: Boot managers
@@ -106,14 +105,14 @@ groups:
       - ref: EN 304 625
         title: Physical and virtual network interfaces
         item: "#25"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 2 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 2 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74860
       - ref: EN 304 626
         title: Operating systems
         item: "#26"
-        stage: enquiry
-        note: ETSI enquiry and vote closed 5 November 2026.
+        stage: approval
+        note: Enquiry and vote closed 5 November 2026; comments being resolved.
         url: https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74415
       - ref: EN 304 627
         title: Routers, modems intended for connection to the internet, and switches
@@ -124,8 +123,8 @@ groups:
       - ref: prEN 40001-3
         title: Microprocessors and microcontrollers with security-related functionalities
         item: "#28–29"
-        stage: approval
-        note: CLC/TC 47X. Formal vote overdue (planned 13 August 2026).
+        stage: enquiry
+        note: CLC/TC 47X. Still at the enquiry stage; the formal vote was planned for 13 August 2026.
         url: https://standards.cencenelec.eu/ords/f?p=305:110:::::FSP_PROJECT,FSP_LANG_ID:80923,25&cs=1BE07E7766E803B7642999CE50FBA4C77
       - ref: prEN 40004-3
         title: ASICs and FPGAs with security-related functionalities
@@ -161,7 +160,6 @@ groups:
   - id: class-2
     title: Important products, Class II
     intro: Vertical standards for the Annex III Class II categories. These products need third-party assessment (modules B+C or H) or a certification scheme.
-    oj: true
     standards:
       - ref: EN 304 635
         title: Hypervisors and container runtime systems
@@ -178,20 +176,19 @@ groups:
       - ref: prEN 40002-3
         title: Tamper-resistant microprocessors and microcontrollers
         item: "#37–38"
-        stage: approval
-        note: CLC/TC 47X. Formal vote overdue (planned 13 August 2026).
+        stage: enquiry
+        note: CLC/TC 47X. Still at the enquiry stage; the formal vote was planned for 13 August 2026.
         url: https://standards.cencenelec.eu/ords/f?p=305:110:::::FSP_PROJECT,FSP_LANG_ID:80924,25&cs=1A4362DE1EF66B841BD1863326AB5EE79
 
   - id: critical
     title: Critical products
     intro: Vertical standards for the Annex IV categories. Drafted by CEN and CENELEC only.
-    oj: true
     standards:
       - ref: prEN 40000-11
         title: Hardware devices with security boxes
         item: "#39"
         stage: approval
-        note: CEN/TC 224 WG 17. Formal vote overdue (planned 10 September 2026).
+        note: CEN/TC 224 WG 17. Formal vote was planned for 10 September 2026; no result published yet.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:82626,25&cs=1BA8AF15840EBEE89339B658BAD10283B
       - ref: prEN 40000-9
         title: Smart meter gateways
@@ -208,14 +205,13 @@ groups:
       - ref: prEN 40003-3
         title: Platforms of smartcards and similar devices, including secure elements
         item: "#41"
-        stage: approval
-        note: CLC/TC 47X. Formal vote overdue (planned 13 August 2026).
-        url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:80922,25&cs=122828396F4D1FB64DC73578C02E69C47
+        stage: enquiry
+        note: CLC/TC 47X. Still at the enquiry stage; the formal vote was planned for 13 August 2026.
+        url: https://standards.cencenelec.eu/ords/f?p=305:110:::::FSP_PROJECT,FSP_LANG_ID:80922,25&cs=122828396F4D1FB64DC73578C02E69C47
 
   - id: ot
     title: Industrial automation (OT)
     intro: CENELEC TC 65X profiles and amendments based on IEC 62443, for OT versions of the Class I and II categories.
-    oj: true
     standards:
       - ref: prEN 50770-1 to -6
         title: OT security profiles for firewalls and IDS/IPS, network management, network interfaces, VPN, routers and switches, and SIEM
@@ -226,13 +222,12 @@ groups:
       - ref: EN IEC 62443-4-1/prAA
         title: Secure product development lifecycle, CRA amendment
         item: "–"
-        stage: approval
-        oj: false
-        note: Formal vote planned 23 February 2027.
+        stage: enquiry
+        note: At the enquiry stage; formal vote planned 23 February 2027.
         url: https://standards.cencenelec.eu/ords/f?p=305:110:::::FSP_PROJECT,FSP_LANG_ID:81487,25&cs=14F38BA6AE92BD8FF392D24ED5CD248BC
       - ref: EN IEC 62443-4-2/prAA
         title: Technical security requirements for IACS components, CRA amendment
         item: "–"
-        stage: approval
-        note: Formal vote planned 8 February 2027.
+        stage: enquiry
+        note: At the enquiry stage; formal vote planned 8 February 2027.
         url: https://standards.cencenelec.eu/ords/f?p=305:110:::::FSP_PROJECT,FSP_LANG_ID:79973,25&cs=12EF1D4DEF8C65FA0FBFEA3BCA78DEE77

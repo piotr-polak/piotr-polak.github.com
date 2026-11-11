@@ -23,7 +23,6 @@
             </ul>
 
             {{ range $data.groups }}
-            {{ $group := . }}
             <h2 id="{{ .id }}">{{ .title }}</h2>
             <p>{{ .intro }}</p>
             <table class="standards-table">
@@ -41,8 +40,7 @@
                         <th scope="row">
                             <a href="{{ .url }}" target="_blank">{{ .ref }}</a>
                             <span class="d-block text-muted small">{{ if eq .item "–" }}Not in M/606{{ else }}M/606 {{ .item }}{{ end }}</span>
-                            {{ $oj := $group.oj }}{{ if isset . "oj" }}{{ $oj = .oj }}{{ end }}
-                            {{ if $oj }}<span class="oj-tag">OJ citation expected</span>{{ end }}
+                            {{ if and (isset . "oj") (not .oj) }}<span class="oj-tag">No OJ citation expected</span>{{ end }}
                         </th>
                         <td>{{ .title }}</td>
                         <td>
@@ -58,7 +56,6 @@
             <h2 id="sources">Sources</h2>
             <p>
                 Stages come from the public CEN-CENELEC and ETSI work programmes; each standard links to its record.
-                The vertical and industrial automation rows were last checked on {{ (time $data.verticals_checked).Format "January 2, 2006" }}.
                 The deadlines in M/606 are 30 August 2026 for items 1 and 15, 30 October 2026 for items 16 to 41,
                 and 30 October 2027 for items 2 to 14. A Commission amendment that would extend the 2026 deadlines
                 had not been adopted on the date above.
