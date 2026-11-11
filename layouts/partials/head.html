@@ -73,13 +73,13 @@
 
     {{/* Adds complete override capability */}}
     {{ $overrideTemplate := resources.Get "sass/override.scss" }}
-    {{ $override := $overrideTemplate | resources.ExecuteAsTemplate "css/theme.scss" . | toCSS | minify }}
+    {{ $override := $overrideTemplate | resources.ExecuteAsTemplate "css/theme.scss" . | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $override.RelPermalink }}">
 
     {{/* Adds custom styles capability */}}
     {{ $customTemplate := resources.Get "sass/custom.scss" }}
     {{ if $customTemplate }}
-    {{ $custom := $customTemplate | resources.ExecuteAsTemplate "css/custom.scss" . | toCSS | minify }}
+    {{ $custom := $customTemplate | resources.ExecuteAsTemplate "css/custom.scss" . | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
     {{ end }}
 
