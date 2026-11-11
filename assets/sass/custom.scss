@@ -246,7 +246,7 @@ article table {
     }
 }
 
-/* Main menu: 15px semibold links (14px on phones); an amber bar under the current page and on hover */
+/* Main menu: 15px semibold links (14px on phones); an amber bar under the current page, a navy one on hover */
 #nav-links {
     display: flex;
     flex-wrap: wrap;
@@ -261,15 +261,16 @@ article table {
         font-weight: 600;
         text-decoration: none;
 
-        /* Hover shows the same amber bar as the current page */
-        &:hover,
-        &.active {
+        /* Hover: a navy bar (light blue in dark mode); the current page keeps its amber bar */
+        &:hover {
             text-decoration: none;
-            box-shadow: inset 0 -3px 0 var(--signal);
+            box-shadow: inset 0 -3px 0 var(--accent);
         }
 
         &.active {
             color: var(--fg);
+            text-decoration: none;
+            box-shadow: inset 0 -3px 0 var(--signal);
         }
 
         &:focus-visible {
