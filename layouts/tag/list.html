@@ -7,7 +7,7 @@
             <li>
                 {{ if ne $outerName "Tags" }}
                     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-                        {{ .Date.Format "Jan 2 2006" }}
+                        {{ .Date.Format "Jan 2, 2006" }}
                     </time>
                 {{ end }}
                 <a href="{{ .RelPermalink }}">

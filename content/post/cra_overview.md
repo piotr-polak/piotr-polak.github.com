@@ -13,11 +13,11 @@ The [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>)
 
 ## The timeline {#the-timeline}
 
--   **11 June 2026**: the provisions on notification of conformity assessment bodies began to apply.
--   **11 September 2026**: manufacturer reporting obligations began to apply, including to products already placed on the EU market.
--   **11 December 2027**: the main CRA requirements apply and the RED cybersecurity Delegated Act is repealed.
+-   **June 11, 2026**: the provisions on notification of conformity assessment bodies began to apply.
+-   **September 11, 2026**: manufacturer reporting obligations began to apply, including to products already placed on the EU market.
+-   **December 11, 2027**: the main CRA requirements apply and the RED cybersecurity Delegated Act is repealed.
 
-Under Article 69, products placed on the market before 11 December 2027 generally become subject to the other CRA requirements only if substantially modified from that date. Article 14 reporting obligations are an exception and already apply to earlier products in scope.
+Under Article 69, products placed on the market before December 11, 2027, generally become subject to the other CRA requirements only if substantially modified from that date. Article 14 reporting obligations are an exception and already apply to earlier products in scope.
 
 
 ## The scope {#the-scope}
@@ -92,7 +92,7 @@ The [CRA standards tracker]({{< relref "cra-standards" >}}) lists the vertical s
 
 ### Technical descriptions {#technical-descriptions}
 
-[Commission Implementing Regulation (EU) 2025/2392](<https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng>), in force since 21 December 2025, gives a technical description of each category, with examples that are illustrative and not exhaustive. It sets out how to read them:
+[Commission Implementing Regulation (EU) 2025/2392](<https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng>), in force since December 21, 2025, gives a technical description of each category, with examples that are illustrative and not exhaustive. It sets out how to read them:
 
 -   **The product as a whole counts.** A product is important or critical only if the product as a whole has the core functionality of a listed category. Integrating a component that falls into a category does not in itself change the class of the final product (for important products, CRA Article 7(1)). For example, the regulation names Wi-Fi, Bluetooth and Zigbee adapters and controllers as physical network interfaces (Class I), but a connected device that integrates one does not become an important product because of it.
 -   **Being able to perform a function is not enough.** A product whose core functionality is different does not meet a category's description, even if it can do what that category does. The regulation's examples: a smartphone is generally not an operating system or a password manager, and security orchestration (SOAR) software is generally not a SIEM.

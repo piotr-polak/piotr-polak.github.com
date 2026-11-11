@@ -21,11 +21,11 @@ A "Recent changes" section at the top shows what moved since the last check.
 
 ## Where things stand
 
-As of 11 November 2026, **no CRA harmonized standard is cited in the Official Journal**.
+As of November 11, 2026, **no CRA harmonized standard is cited in the Official Journal**.
 
--   EN 40000-1-1 (vocabulary) and EN 40000-1-2 (principles, risk management and lifecycle activities) were ratified on 2 November 2026, with publication planned for November.
+-   EN 40000-1-1 (vocabulary) and EN 40000-1-2 (principles, risk management and lifecycle activities) were ratified on November 2, 2026, with publication planned for November.
 -   prEN 40000-1-3 (vulnerability handling) is in its formal vote.
 -   prEN 40000-1-4 (generic security requirements) is drafted, with publication planned for June 2027.
 -   ETSI has closed the enquiry and vote for six of its product standards, and most other vertical standards are in their approval step.
 
-With the main CRA requirements applying from 11 December 2027, the coming months decide which standards manufacturers can rely on in time. I will update the tracker as the standards move; see the [CRA Standards Tracker]({{< relref "cra-standards" >}}) for the full table.
+With the main CRA requirements applying from December 11, 2027, the coming months decide which standards manufacturers can rely on in time. I will update the tracker as the standards move; see the [CRA Standards Tracker]({{< relref "cra-standards" >}}) for the full table.

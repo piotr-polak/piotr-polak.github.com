@@ -5,12 +5,12 @@ date = 2026-01-02T00:00:00+01:00
 lastmod = 2026-11-10
 categories = ["Regulations", "Cybersecurity"]
 draft = false
-description = "CRA reporting obligations from 11 September 2026: what to report, the 24-hour and 72-hour notifications, and the different final-report deadlines for vulnerabilities and severe incidents."
+description = "CRA reporting obligations from September 11, 2026: what to report, the 24-hour and 72-hour notifications, and the different final-report deadlines for vulnerabilities and severe incidents."
 +++
 
 *Update (2 October 2026): the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>) is now operational.*
 
-The manufacturer reporting obligations under [Article 14 of the Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) have applied since 11 September 2026.
+The manufacturer reporting obligations under [Article 14 of the Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) have applied since September 11, 2026.
 
 
 ## Reporting Process {#reporting-process}
@@ -45,7 +45,7 @@ The 72-hour notification and final report are required unless the relevant infor
 ### Submission Platform {#submission-platform}
 
 -   Reports are submitted via the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), developed by ENISA
--   Operational since ****11 September 2026****
+-   Operational since ****September 11, 2026****
 
 
 ### Distribution {#distribution}
@@ -71,7 +71,7 @@ Manufacturers should:
 
 ****Prepare Reporting Procedures****
 
--   Set up processes to submit reports through the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), operational since 11 September 2026.
+-   Set up processes to submit reports through the [CRA Single Reporting Platform](<https://portal.cra-srp.enisa.europa.eu/>), operational since September 11, 2026.
 -   Build the [reporting deadlines](#reporting-deadlines) into your response procedures: early warning within 24 hours and notification within 72 hours of awareness, both without undue delay.
 -   Track the final-report trigger separately: availability of a corrective or mitigating measure for vulnerabilities; submission of the incident notification for severe incidents.
 

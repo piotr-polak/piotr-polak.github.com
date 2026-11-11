@@ -12,7 +12,7 @@ description = "EN 40000-1-2, the horizontal Cyber Resilience Act process standar
 a horizontal standard supporting the Cyber Resilience Act,
 has been approved in the CEN-CENELEC formal vote with 100 percent of the votes in favor.
 
-*Status checked on 10 November 2026: the CEN-CENELEC project page lists the standard as approved, with a date of availability of 18 November 2026. That is the scheduled distribution date of the definitive text, not its national implementation deadline.*
+*Status checked on November 10, 2026: the CEN-CENELEC project page lists the standard as approved, with a date of availability of November 18, 2026. That is the scheduled distribution date of the definitive text, not its national implementation deadline.*
 
 The standard, formally titled "Cybersecurity requirements for products with digital elements - Part 1-2: Principles, product risk management, and lifecycle activities",
 specifies general cybersecurity principles and general risk management activities for all products with digital elements,

@@ -12,7 +12,7 @@
         <ul class="list-unstyled">
             {{ range first site.Params.recent_posts (where site.RegularPages "Type" "in" site.Params.mainSections) }}
                 <li>
-                    {{ .Date.Format "Jan 2 2006" }}
+                    {{ .Date.Format "Jan 2, 2006" }}
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
             {{ end }}

@@ -53,9 +53,9 @@ Existing RED DA assessments can provide useful evidence, but they do not establi
 
 ## The timeline {#the-timeline}
 
-The RED DA cybersecurity requirements have applied since **1 August 2025**. [Delegated Regulation (EU) 2026/339](<https://eur-lex.europa.eu/eli/reg_del/2026/339/oj/eng>) repeals the RED DA with effect from **11 December 2027**, when the main CRA requirements apply. The Radio Equipment Directive itself is not repealed.
+The RED DA cybersecurity requirements have applied since **August 1, 2025**. [Delegated Regulation (EU) 2026/339](<https://eur-lex.europa.eu/eli/reg_del/2026/339/oj/eng>) repeals the RED DA with effect from **December 11, 2027**, when the main CRA requirements apply. The Radio Equipment Directive itself is not repealed.
 
-The repeal preserves market surveillance of the RED DA requirements for equipment placed on the market between 1 August 2025 and 10 December 2027. CRA Article 14 reporting obligations have already applied since **11 September 2026**, including to earlier products in scope. Other CRA requirements generally apply to products placed on the market before 11 December 2027 only if substantially modified from that date.
+The repeal preserves market surveillance of the RED DA requirements for equipment placed on the market between August 1, 2025, and December 10, 2027. CRA Article 14 reporting obligations have already applied since **September 11, 2026**, including to earlier products in scope. Other CRA requirements generally apply to products placed on the market before December 11, 2027, only if substantially modified from that date.
 
 
 ## Relevant links {#relevant-links}
