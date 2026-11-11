@@ -1,0 +1,26 @@
+{{/* "Read next" links at the end of a page. Front matter read_next = ["/post/name", ...]
+     replaces the automatic picks (related posts), in the listed order. */}}
+{{ $readNext := sort (first 3 (where (site.RegularPages.Related .) "Type" "in" site.Params.mainSections)) "Date" "desc" }}
+{{ with .Params.read_next }}
+    {{ $readNext = slice }}
+    {{ range . }}
+        {{ with site.GetPage . }}
+            {{ $readNext = $readNext | append . }}
+        {{ else }}
+            {{ errorf "%s: read_next page %q not found" $.File.Path . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ with $readNext }}
+<section class="mt-5" aria-labelledby="read-next-title">
+    <h2 class="h5" id="read-next-title"><span class="badge category">Read next</span></h2>
+    <ul class="list-unstyled">
+        {{ range . }}
+        <li>
+            {{ .Date.Format "Jan 2 2006" }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

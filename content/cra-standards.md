@@ -4,6 +4,7 @@ date = 2026-11-11
 url = "/cra/standards/"
 draft = false
 layout = "standards"
+read_next = ["/post/cra_overview", "/post/en_40000_1_2_approved", "/post/cra_reporting_obligations"]
 description = "Where each harmonised standard for the EU Cyber Resilience Act stands: the horizontal EN 40000-1 series and the vertical standards for important and critical products, with their stage in CEN, CENELEC and ETSI."
 
 # A child of "CRA guide" so that menu item shows as current on this page; the menu only renders top-level items

@@ -16,6 +16,7 @@
                     {{ range $data.groups }}
                     <li><a href="#{{ .id }}">{{ .title }}</a> <span class="text-muted">({{ len .standards }})</span></li>
                     {{ end }}
+                    <li><a href="#recent-changes">Recent changes</a></li>
                     <li><a href="#sources">Sources</a></li>
                 </ul>
             </nav>
@@ -71,6 +72,14 @@
             </table>
             {{ end }}
 
+            <h2 id="recent-changes">Recent changes</h2>
+            {{ range first 3 $data.changes }}
+            <h3 class="h6 mt-3">Checked on <time datetime="{{ .date }}">{{ (time .date).Format "January 2, 2006" }}</time></h3>
+            <ul>
+                {{ range .items }}<li>{{ . | markdownify }}</li>{{ end }}
+            </ul>
+            {{ end }}
+
             <h2 id="sources">Sources</h2>
             <p>
                 Stages come from the public CEN-CENELEC and ETSI work programmes; each standard links to its record.
@@ -79,5 +88,7 @@
                 had not been adopted on the date above.
             </p>
         </article>
+
+        {{ partial "read-next.html" . }}
     </div>
 {{ end }}
