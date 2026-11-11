@@ -43,7 +43,7 @@ a {
     }
 }
 
-.about-page {
+#content > main.container .about-page {
     li + li {
         margin-top: 0.5rem;
     }
@@ -136,5 +136,110 @@ article table {
     @media (max-width: 575.98px) {
         justify-content: center;
         margin-left: 0;
+    }
+}
+
+/* Reading typography: larger body text, a full line between paragraphs, tighter lists */
+#content > main.container {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+
+        @media (max-width: 575.98px) {
+            font-size: 1.75rem;
+        }
+    }
+
+    h2:not(.h5) {
+        margin-top: 2.25rem;
+    }
+
+    ul:not(.list-unstyled),
+    ol {
+        padding-left: 1.3em;
+    }
+
+    ul:not(.list-unstyled) > li + li,
+    ol > li + li {
+        margin-top: 0.35em;
+    }
+
+    /* Contents list: quieter links, tighter rows */
+    #TableOfContents {
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        li + li {
+            margin-top: 0.1em;
+        }
+    }
+}
+
+/* Article date line; on phones the two dates stack without the separator */
+.post-meta-date {
+    display: inline-block;
+}
+
+.post-meta-sep {
+    margin: 0 0.35em;
+}
+
+@media (max-width: 575.98px) {
+    .post-meta-date {
+        display: block;
+    }
+
+    .post-meta-sep {
+        display: none;
+    }
+}
+
+/* Compact header on phones so articles start higher on the first screen */
+@media (max-width: 575.98px) {
+    header.container {
+        margin-top: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+
+        hr {
+            margin: 0.75rem 0 0;
+        }
+    }
+
+    #home-image {
+        width: 64px;
+        height: 64px;
+        border-width: 3px;
+    }
+
+    header .h2 {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.15rem !important;
+        font-size: 1.5rem;
+    }
+
+    header p.text-muted {
+        margin-bottom: 0.25rem !important;
+        font-size: 0.9rem;
+    }
+
+    #nav-links {
+        margin-bottom: 0 !important;
+    }
+
+    #nav-social {
+        margin-bottom: 0;
     }
 }
