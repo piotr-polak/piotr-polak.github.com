@@ -2,7 +2,7 @@
     <div class="row">
         {{ if isset .Site.Params "home_image" }}
         <div class="col-sm-auto col-12 ml-sm-2 text-center pt-sm-4">
-            <a href="/" class="text-decoration-none" aria-label="Home">
+            <a href="/" class="home-link text-decoration-none{{ if .IsHome }} is-home{{ end }}" aria-label="Home">
                 <img id="home-image" class="rounded-circle" alt="{{ .Site.Params.author }}"
                     {{ if (and (isset .Site.Params "home_image") (fileExists (printf "static/%s" (strings.TrimPrefix "/" .Site.Params.home_image)))) }}
                         {{ if hasPrefix .Site.Params.home_image "/" }}

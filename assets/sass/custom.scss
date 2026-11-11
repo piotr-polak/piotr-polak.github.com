@@ -112,13 +112,21 @@ hr {
     border-color: var(--avatar-ring);
 }
 
-/* Branding: an amber strip along the top of every page, an amber ring around the avatar,
+/* Branding: an amber strip along the top of every page, an avatar ring (below),
    and a short amber bar above each article section heading */
 body {
     border-top: 4px solid var(--signal);
 }
 
+/* The avatar ring is navy (light blue in dark mode), and amber on the home page and on hover */
 #home-image {
+    box-shadow: 0 0 0 2px var(--accent), 0 10px 7px -10px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.15s ease;
+}
+
+.home-link.is-home #home-image,
+.home-link:hover #home-image,
+.home-link:focus-visible #home-image {
     box-shadow: 0 0 0 2px var(--signal), 0 10px 7px -10px rgba(0, 0, 0, 0.6);
 }
 
