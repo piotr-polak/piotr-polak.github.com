@@ -1,3 +1,39 @@
+{{- /* Home page: the full masthead with portrait, tagline, menu, and labelled social links.
+       Other pages: a compact bar with a small photo, the name and tagline, the menu, and icon-only social links. */ -}}
+{{- $photo := "/images/avatar.png" }}
+{{- with site.Params.home_image }}
+    {{- if fileExists (printf "static/%s" (strings.TrimPrefix "/" .)) }}{{ $photo = printf "/%s" (strings.TrimPrefix "/" .) }}{{ end }}
+{{- end }}
+{{- if not .IsHome }}
+<header class="container site-bar">
+    <div class="site-bar-row">
+        <a href="/" class="site-brand" aria-label="{{ site.Params.header_title | default "Home" }} - home">
+            <img class="site-brand-photo" src="{{ $photo }}" alt="" width="48" height="48">
+            <span class="site-brand-text">
+                <span class="site-brand-name">{{ site.Params.header_title | default "Your Name" }}</span>
+                <span class="site-brand-sub">{{ site.Params.header_subtitle | default "" }}</span>
+            </span>
+        </a>
+        <nav class="site-bar-nav" aria-label="Main navigation">
+            <ul id="nav-links" class="list-unstyled mb-0">
+                {{- $currentPage := . }}
+                {{- range site.Menus.main }}
+                    {{- $isPage := $currentPage.IsMenuCurrent "main" . }}
+                    <li><a class="badge badge-white{{ if or $isPage ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}" href="{{ .URL }}"{{ if $isPage }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                {{- end }}
+            </ul>
+        </nav>
+        <ul class="site-bar-social list-unstyled mb-0">
+            {{- range site.Params.social }}
+                {{- $icon := resources.Get (printf "icons/%s.svg" .icon) }}
+                {{- if not $icon }}{{ errorf "params.social %q: assets/icons/%s.svg not found" .name .icon }}{{ end }}
+                <li><a href="{{ .href | safeURL }}" aria-label="{{ .name }}" title="{{ .name }}"{{ if hasPrefix .href "http" }} target="_blank"{{ end }}>{{ $icon.Content | strings.TrimSpace | safeHTML }}</a></li>
+            {{- end }}
+        </ul>
+    </div>
+    <hr />
+</header>
+{{- else }}
 <header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
     <div class="row">
         {{ if isset .Site.Params "home_image" }}
@@ -66,3 +102,4 @@
     </div>
     <hr />
 </header>
+{{- end }}
