@@ -5,6 +5,7 @@
     --bg: #17191c;
     --fg: #e4e6e9;
     --muted: #9aa3ab;
+    --card-muted: #a8b0b8;
     --link: #8ab4f8;
     --link-hover: #aecbfa;
     --accent: #8ab4f8;
@@ -28,6 +29,7 @@
     --bg: #f7f5f0;
     --fg: #212529;
     --muted: #626b73;
+    --card-muted: #56616b;
     --link: #1d4f91;
     --link-hover: #163d70;
     --accent: #1d3557;
@@ -185,7 +187,7 @@ a:hover {
 .start-desc {
     grid-column: 1;
     margin-top: 0.125rem;
-    color: var(--muted);
+    color: var(--card-muted);
     font-size: 0.9375rem;
     line-height: 1.45;
 }
