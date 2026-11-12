@@ -1,6 +1,9 @@
 {{ define "main" }}
     {{ $data := site.Data.cra_standards }}
     {{ $order := slice "drafting" "enquiry" "approval" "approved" "cited" }}
+    {{ $all := slice }}
+    {{ range $data.groups }}{{ $all = $all | append .standards }}{{ end }}
+    {{ $cited := len (where $all "stage" "cited") }}
     <div class="pl-sm-2 standards-page">
         <div class="page-head">
             {{ partial "page-label.html" .Params.pageLabel }}
@@ -9,6 +12,12 @@
                 <span class="post-meta-date">Status as of <time datetime="{{ $data.as_of }}">{{ (time $data.as_of).Format "January 2, 2006" }}</time></span>
             </small>
         </div>
+
+        <p class="tracker-summary">
+            Track {{ len $all }} standards, grouped by product type.
+            {{ if eq $cited 0 }}<strong>No CRA harmonized standard is cited in the Official Journal yet.</strong>
+            {{ else }}<strong>{{ $cited }} {{ cond (eq $cited 1) "standard is" "standards are" }} marked as cited in the Official Journal.</strong>{{ end }}
+        </p>
 
         <div class="toc mb-4{{ if site.Params.tocPanel }} toc-panel{{ end }}">
             <h2 class="toc-title" id="toc-title">Contents</h2>
@@ -23,24 +32,26 @@
             </nav>
         </div>
 
-        <article class="page-lead">
-            {{ .Content }}
+        <article>
+            <details class="tracker-help">
+                <summary id="tracker-methodology">How to use this tracker</summary>
+                {{ .Content }}
+            </details>
 
-            {{/* Count the standards in each stage */}}
-            {{ $all := slice }}
-            {{ range $data.groups }}{{ $all = $all | append .standards }}{{ end }}
-            <h2 id="stage-key">Stage key</h2>
-            <ul class="stage-key list-unstyled" aria-labelledby="stage-key">
-                {{ range $order }}
-                {{ $stage := index $data.stages . }}
-                {{ $n := len (where $all "stage" .) }}
-                <li>
-                    <span class="stage stage-{{ . }}">{{ $stage.label }}</span>
-                    <span class="stage-count">{{ $n }}<span class="sr-only"> {{ cond (eq $n 1) "standard" "standards" }}</span></span>
-                    <span class="stage-desc">{{ $stage.desc }}</span>
-                </li>
-                {{ end }}
-            </ul>
+            <details class="tracker-help">
+                <summary id="stage-key">Stage key</summary>
+                <ul class="stage-key list-unstyled" aria-labelledby="stage-key">
+                    {{ range $order }}
+                    {{ $stage := index $data.stages . }}
+                    {{ $n := len (where $all "stage" .) }}
+                    <li>
+                        <span class="stage stage-{{ . }}">{{ $stage.label }}</span>
+                        <span class="stage-count">{{ $n }}<span class="sr-only"> {{ cond (eq $n 1) "standard" "standards" }}</span></span>
+                        <span class="stage-desc">{{ $stage.desc }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </details>
 
             {{ range $data.groups }}
             <h2 id="{{ .id }}">{{ .title }}</h2>
