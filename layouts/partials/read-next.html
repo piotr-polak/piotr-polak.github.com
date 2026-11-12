@@ -14,13 +14,6 @@
 {{ with $readNext }}
 <section class="mt-5" aria-labelledby="read-next-title">
     <h2 class="h5" id="read-next-title"><span class="badge category">Read next</span></h2>
-    <ul class="list-unstyled">
-        {{ range . }}
-        <li>
-            {{ .Date.Format "Jan 2, 2006" }}
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-    </ul>
+    {{ partial "article-entries.html" (dict "pages" . "level" 3) }}
 </section>
 {{ end }}
