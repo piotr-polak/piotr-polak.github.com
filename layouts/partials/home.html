@@ -1,4 +1,4 @@
-<div class="pl-sm-2 pt-2">
+<div class="pl-sm-2 pt-2 home-latest">
     <div class="row">
         <div class="col-12">
             {{ $recent := 7 }}
@@ -7,7 +7,7 @@
             {{ end }}
             {{ if gt $recent 0 }}
             <div class="pb-3">
-                <h2 class="h5"><span class="badge category">Latest articles</span></h2>
+                <h2>Latest articles</h2>
                 {{ partial "article-entries.html" (dict "pages" (first $recent (where .Site.RegularPages "Type" "in" site.Params.mainSections)) "level" 3) }}
                 <p class="mb-0"><a href="/post/">All articles</a> · <a href="/index.xml">Subscribe via RSS</a> for new ones</p>
             </div>
