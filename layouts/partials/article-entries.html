@@ -1,0 +1,24 @@
+{{- /* Article list with date, categories, title, and description.
+       Called with dict "pages" (pages to list, in order) and "level" (title heading level, 2 or 3). */ -}}
+{{- $hidden := site.Params.articleListHiddenCategories | default slice -}}
+{{- $level := .level | default 2 -}}
+<ul class="list-unstyled article-list">
+    {{ range .pages }}
+        {{- $cats := slice -}}
+        {{- range .Params.categories -}}
+            {{- if not (in $hidden .) -}}{{- $cats = $cats | append . -}}{{- end -}}
+        {{- end }}
+        <li class="article-entry">
+            <div class="article-entry-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                {{- range $cats }} · {{ . }}{{ end }}
+            </div>
+            {{- if eq $level 3 }}
+            <h3 class="article-entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            {{- else }}
+            <h2 class="article-entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            {{- end }}
+            {{ with .Description }}<p class="article-entry-desc">{{ . }}</p>{{ end }}
+        </li>
+    {{ end }}
+</ul>

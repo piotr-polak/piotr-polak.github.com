@@ -8,14 +8,7 @@
             {{ if gt $recent 0 }}
             <div class="pb-3">
                 <h2 class="h5"><span class="badge category">Latest articles</span></h2>
-                <ul class="list-unstyled">
-                    {{ range first $recent (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
-                        <li>
-                            {{ .Date.Format "Jan 2, 2006" }}
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
+                {{ partial "article-entries.html" (dict "pages" (first $recent (where .Site.RegularPages "Type" "in" site.Params.mainSections)) "level" 3) }}
                 <p class="mb-0"><a href="/post/">All articles</a> · <a href="/index.xml">Subscribe via RSS</a> for new ones</p>
             </div>
             {{ end }}
