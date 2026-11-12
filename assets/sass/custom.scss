@@ -593,6 +593,134 @@ article table {
     }
 }
 
+/* Full masthead: identity and utility links above a content-aligned navigation row */
+header.site-masthead {
+    margin: 2rem 0 1.75rem;
+
+    .masthead-inner {
+        margin-left: 0.5rem;
+    }
+
+    .masthead-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .masthead-identity {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        min-width: 0;
+    }
+
+    .home-link {
+        flex: none;
+    }
+
+    #home-image {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+        border-radius: 50%;
+        box-shadow: none;
+    }
+
+    .masthead-text {
+        min-width: 0;
+    }
+
+    .masthead-name {
+        margin: 0 0 0.35rem;
+        font-size: 1.625rem;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: normal;
+
+        a {
+            color: var(--fg);
+            text-decoration: none;
+        }
+    }
+
+    .masthead-tagline {
+        max-width: 29ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9375rem;
+        line-height: 1.45;
+    }
+
+    #nav-social {
+        flex: none;
+        left: 0;
+        margin: 0;
+        gap: 0.75rem;
+    }
+
+    .masthead-nav {
+        margin-top: 1rem;
+        border-bottom: 1px solid var(--rule-strong);
+    }
+
+    #nav-links {
+        margin: 0;
+        gap: 0 1.5rem;
+        justify-content: flex-start;
+
+        a {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0.65rem 0;
+            line-height: 1.3;
+        }
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--link);
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 699.98px) {
+        .masthead-top {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+        }
+
+        #nav-social {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .masthead-inner {
+            margin-left: 0;
+        }
+
+        #home-image {
+            width: 64px;
+            height: 64px;
+        }
+
+        .masthead-name {
+            font-size: 1.5rem;
+        }
+
+        .masthead-nav {
+            margin-top: 0.75rem;
+        }
+
+        #nav-links {
+            justify-content: space-between;
+            gap: 0 0.5rem;
+        }
+    }
+}
+
 /* Compact header on phones so articles start higher on the first screen */
 @media (max-width: 575.98px) {
     header.container {
