@@ -444,6 +444,51 @@ article table {
             margin-top: 0.1em;
         }
     }
+
+    /* Articles page: date and category line, title, description clamped to two lines */
+    .article-entry {
+        padding: 1rem 0;
+        border-top: 1px solid var(--rule);
+
+        &:first-child {
+            padding-top: 0;
+            border-top: 0;
+        }
+    }
+
+    .article-entry-meta {
+        color: var(--muted);
+        font-size: 0.875rem;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.45;
+    }
+
+    h2.article-entry-title {
+        margin: 0.125rem 0 0.25rem;
+        font-size: 1.1875rem;
+        font-weight: 700;
+        line-height: 1.3;
+
+        a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .article-entry-desc {
+        display: -webkit-box;
+        margin: 0;
+        overflow: hidden;
+        font-size: 0.9375rem;
+        line-height: 1.55;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
 }
 
 /* Article date line; on phones the two dates stack without the separator */

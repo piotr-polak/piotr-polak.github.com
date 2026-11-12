@@ -64,6 +64,7 @@ copyright = "© 2026 Piotr Polak"
   home_image = "/avatar.png"                 # Path to header image starting from the static directory (optional)
   recent_posts = 5                           # Max amount of recent posts to show
   mainSections = ["posts", "post", "blog"]   # Main sections to include in recent posts
+  articleListHiddenCategories = ["Regulations"] # Categories too common to label on the Articles page
   [params.style]                             # CSS style overrides
     backgroundColor = "#f7f5f0"
     homeImageBorderColor = "#ffffff"

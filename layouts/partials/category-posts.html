@@ -1,11 +1,20 @@
-{{- /* The Articles page (/post/): every article once, newest first */ -}}
+{{- /* The Articles page (/post/): every article once, newest first, with its description */ -}}
+{{- $hidden := site.Params.articleListHiddenCategories | default slice -}}
 <div class="pl-sm-2 pt-2">
     <h1 class="mb-3">{{ .Title }}</h1>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled article-list">
         {{ range .Pages.ByDate.Reverse }}
-            <li>
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- $cats := slice -}}
+            {{- range .Params.categories -}}
+                {{- if not (in $hidden .) -}}{{- $cats = $cats | append . -}}{{- end -}}
+            {{- end }}
+            <li class="article-entry">
+                <div class="article-entry-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                    {{- range $cats }} · {{ . }}{{ end }}
+                </div>
+                <h2 class="article-entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                {{ with .Description }}<p class="article-entry-desc">{{ . }}</p>{{ end }}
             </li>
         {{ end }}
     </ul>
