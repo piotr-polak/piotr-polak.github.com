@@ -12,8 +12,8 @@
     {{ end }}
 {{ end }}
 {{ with $readNext }}
-<section class="mt-5" aria-labelledby="read-next-title">
-    <h2 class="h5" id="read-next-title"><span class="badge category">Read next</span></h2>
+<section class="read-next" aria-labelledby="read-next-title">
+    <h2 id="read-next-title">Read next</h2>
     {{ partial "article-entries.html" (dict "pages" . "level" 3) }}
 </section>
 {{ end }}

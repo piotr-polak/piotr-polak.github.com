@@ -1,5 +1,8 @@
 {{- /* The Articles page (/post/): every article once, newest first, with its description */ -}}
 <div class="pl-sm-2 pt-2">
-    <h1 class="mb-3">{{ .Title }}</h1>
+    <div class="page-head">
+        {{ partial "page-label.html" .Params.pageLabel }}
+        <h1>{{ .Title }}</h1>
+    </div>
     {{ partial "article-entries.html" (dict "pages" .Pages.ByDate.Reverse "level" 2) }}
 </div>

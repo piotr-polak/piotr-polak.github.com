@@ -1,7 +1,8 @@
 {{ define "main" }}
     <div class="pl-sm-2">
-        <div class="mb-3">
-            <h1 class="mb-0">{{ .Title }}</h1>
+        <div class="page-head">
+            {{ partial "page-label.html" (.Params.pageLabel | default "Article") }}
+            <h1>{{ .Title }}</h1>
             {{ if .Params.Subtitle }}
             <p class="h5">{{ .Params.Subtitle }}</p>
             {{ end }}
@@ -15,13 +16,13 @@
         </div>
 
         {{ if ge (len .Fragments.HeadingsMap) 4 }}
-        <div class="toc mb-4">
-            <h2 class="h5" id="toc-title"><span class="badge category">Contents</span></h2>
+        <div class="toc mb-4{{ if site.Params.tocPanel }} toc-panel{{ end }}">
+            <h2 class="toc-title" id="toc-title">Contents</h2>
             {{ replace .TableOfContents `<nav id="TableOfContents">` `<nav id="TableOfContents" aria-labelledby="toc-title">` | safeHTML }}
         </div>
         {{ end }}
 
-        <article>
+        <article class="page-lead">
             {{ .Content }}
         </article>
 

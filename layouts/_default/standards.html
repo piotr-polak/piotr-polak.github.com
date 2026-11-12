@@ -2,15 +2,16 @@
     {{ $data := site.Data.cra_standards }}
     {{ $order := slice "drafting" "enquiry" "approval" "approved" "cited" }}
     <div class="pl-sm-2 standards-page">
-        <div class="mb-3">
-            <h1 class="mb-0">{{ .Title }}</h1>
+        <div class="page-head">
+            {{ partial "page-label.html" .Params.pageLabel }}
+            <h1>{{ .Title }}</h1>
             <small class="post-meta text-muted">
                 <span class="post-meta-date">Status as of <time datetime="{{ $data.as_of }}">{{ (time $data.as_of).Format "January 2, 2006" }}</time></span>
             </small>
         </div>
 
-        <div class="toc mb-4">
-            <h2 class="h5" id="toc-title"><span class="badge category">Contents</span></h2>
+        <div class="toc mb-4{{ if site.Params.tocPanel }} toc-panel{{ end }}">
+            <h2 class="toc-title" id="toc-title">Contents</h2>
             <nav id="TableOfContents" aria-labelledby="toc-title">
                 <ul>
                     {{ range $data.groups }}
@@ -22,13 +23,13 @@
             </nav>
         </div>
 
-        <article>
+        <article class="page-lead">
             {{ .Content }}
 
             {{/* Count the standards in each stage */}}
             {{ $all := slice }}
             {{ range $data.groups }}{{ $all = $all | append .standards }}{{ end }}
-            <h2 class="h5" id="stage-key"><span class="badge category">Stage key</span></h2>
+            <h2 id="stage-key">Stage key</h2>
             <ul class="stage-key list-unstyled" aria-labelledby="stage-key">
                 {{ range $order }}
                 {{ $stage := index $data.stages . }}

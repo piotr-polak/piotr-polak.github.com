@@ -1,6 +1,9 @@
 {{ define "main" }}
     <div class="about-page pl-sm-2">
-        <h1 class="mb-3">{{ .Title }}</h1>
+        <div class="page-head">
+            {{ partial "page-label.html" .Params.pageLabel }}
+            <h1>{{ .Title }}</h1>
+        </div>
         {{ .Content }}
     </div>
 

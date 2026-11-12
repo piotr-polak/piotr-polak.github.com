@@ -1,0 +1,3 @@
+{{- /* Small section label above the page title, shown when params.pageLabels is on.
+       Called with the label text; nothing is rendered for an empty label. */ -}}
+{{- if site.Params.pageLabels }}{{ with . }}<p class="page-label">{{ . }}</p>{{ end }}{{ end -}}

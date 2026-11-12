@@ -4,6 +4,7 @@ description = "A practical starting point for the EU Cyber Resilience Act: what 
 date = 2026-10-02
 lastmod = 2026-11-11
 draft = false
+pageLabel = "CRA guide"
 +++
 
 The [Cyber Resilience Act](<https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>) is an EU regulation that requires products with digital elements to be secure when placed on the EU market and to remain secure over their supported lifetime.
