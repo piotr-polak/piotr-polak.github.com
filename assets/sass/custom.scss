@@ -125,8 +125,9 @@ a:hover {
         border-top: 0;
     }
 
-    .home-background {
-        margin-top: 1.5rem;
+    /* Keep the original home-card surface without changing cards on other pages. */
+    .start-row {
+        background: var(--rule);
     }
 }
 
