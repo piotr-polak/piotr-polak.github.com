@@ -53,7 +53,13 @@
             metas.forEach((m, i) => (m.content = s === "auto" ? [lightBar, darkBar][i] : s === "dark" ? darkBar : lightBar));
             document.querySelectorAll("[data-theme-group]").forEach((group) => {
                 group.hidden = false;
-                group.querySelectorAll("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themeChoice === s));
+                const slider = group.hasAttribute("data-theme-slider");
+                if (slider) group.dataset.themeState = s;
+                group.querySelectorAll("[data-theme-choice]").forEach((b) => {
+                    const selected = b.dataset.themeChoice === s;
+                    b.setAttribute("aria-pressed", selected);
+                    if (slider) b.tabIndex = selected ? 0 : -1;
+                });
             });
         };
         try {
@@ -62,6 +68,18 @@
         } catch (e) {}
         sync();
         document.addEventListener("DOMContentLoaded", sync);
+        document.addEventListener("keydown", (e) => {
+            const button = e.target.closest("[data-theme-slider] [data-theme-choice]");
+            if (!button || e.altKey || e.ctrlKey || e.metaKey) return;
+            const steps = { ArrowLeft: -1, ArrowUp: -1, ArrowRight: 1, ArrowDown: 1 };
+            if (!(e.key in steps) && e.key !== "Home" && e.key !== "End") return;
+            e.preventDefault();
+            const buttons = [...button.closest("[data-theme-slider]").querySelectorAll("[data-theme-choice]")];
+            const next = e.key === "Home" ? 0 : e.key === "End" ? buttons.length - 1
+                : (buttons.indexOf(button) + steps[e.key] + buttons.length) % buttons.length;
+            buttons[next].focus();
+            buttons[next].click();
+        });
         document.addEventListener("click", (e) => {
             const s = e.target.closest("[data-theme-group] [data-theme-choice]")?.dataset.themeChoice;
             if (!s) return;
@@ -92,6 +110,11 @@
     {{ if .Site.Params.floatingHeader }}
     {{ $floating := resources.Get "sass/floating-header.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $floating.RelPermalink }}">
+    {{ end }}
+
+    {{ if .Site.Params.headerThemeSlider }}
+    {{ $slider := resources.Get "sass/theme-slider.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $slider.RelPermalink }}">
     {{ end }}
 
     {{ template "_internal/google_analytics.html" . }}

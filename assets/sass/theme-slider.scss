@@ -1,0 +1,96 @@
+/* Header theme control: a single thumb slides between Auto, Light, and Dark. */
+.theme-choices.theme-slider {
+    --slider-step: 28px;
+    --slider-position: 0;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(3, var(--slider-step));
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: var(--rule);
+
+    &[hidden] {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: calc(var(--slider-step) - 6px);
+        height: calc(var(--slider-step) - 6px);
+        border: 0;
+        border-radius: 50%;
+        background: var(--bg);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+        transform: translateX(calc(var(--slider-position) * var(--slider-step)));
+        transition: transform 180ms ease;
+        pointer-events: none;
+    }
+
+    &[data-theme-state="light"] {
+        --slider-position: 1;
+    }
+
+    &[data-theme-state="dark"] {
+        --slider-position: 2;
+    }
+
+    button {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--slider-step);
+        height: var(--slider-step);
+        min-height: var(--slider-step);
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+        color: var(--card-muted);
+        line-height: 1;
+
+        &:hover,
+        &[aria-pressed="true"] {
+            color: var(--fg);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--link);
+            outline-offset: 3px;
+        }
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-choices.theme-slider::before {
+        transition: none;
+    }
+}
+
+@media (forced-colors: active) {
+    .theme-choices.theme-slider::before {
+        border-color: Highlight;
+        box-shadow: none;
+    }
+
+    .theme-choices.theme-slider button[aria-pressed="true"] {
+        outline: 2px solid Highlight;
+        outline-offset: -3px;
+    }
+}

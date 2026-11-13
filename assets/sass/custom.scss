@@ -758,6 +758,11 @@ header.site-masthead {
 #theme-switch {
     justify-content: center;
     margin-bottom: 0.5rem;
+
+    button {
+        border: 0;
+        background: var(--rule);
+    }
 }
 
 /* CRA standards tracker: stage pills, summary row, and tables that stack on phones */

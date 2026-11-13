@@ -68,6 +68,7 @@ copyright = "© 2026 Piotr Polak"
   pageLabels = false                         # Small section label above page titles (pageLabel in front matter)
   tocPanel = true                            # Show article contents in a bordered two-column panel
   floatingHeader = true                      # Reveal a compact glass header after the masthead scrolls away
+  headerThemeSlider = true                   # Compact Auto / Light / Dark slider in both headers
   [params.style]                             # CSS style overrides
     backgroundColor = "#f7f5f0"
     homeImageBorderColor = "#ffffff"

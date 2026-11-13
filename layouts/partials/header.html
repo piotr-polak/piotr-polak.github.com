@@ -40,7 +40,7 @@
                     {{ end }}
                 </ul>
             </nav>
-            {{ partial "theme-choices.html" (dict "class" "masthead-theme") }}
+            {{ partial "theme-choices.html" (dict "class" "masthead-theme" "slider" .Site.Params.headerThemeSlider) }}
         </div>
     </div>
 </header>
