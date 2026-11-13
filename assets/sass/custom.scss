@@ -527,7 +527,6 @@ header.site-masthead {
     margin: 2rem auto 1.75rem;
 
     .masthead-inner {
-        position: relative;
         margin-left: 0.5rem;
     }
 
@@ -582,8 +581,7 @@ header.site-masthead {
         line-height: 1.45;
     }
 
-    /* Right-hand column: the social links, centred on the portrait. From 700px the theme switch is pinned to the
-       top-right corner above them, close to the top of the page; on narrower screens it sits centred above the links. */
+    /* Right-hand column: social links centred on the portrait. */
     .masthead-utility {
         flex: none;
         display: flex;
@@ -598,17 +596,24 @@ header.site-masthead {
         gap: 0.75rem;
     }
 
-    @media (min-width: 700px) {
-        .masthead-theme {
-            position: absolute;
-            top: -1.25rem;
-            right: 0;
+    .masthead-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.25rem 1rem;
+        margin-top: 1rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--rule-strong);
+
+        nav {
+            margin-right: auto;
+            min-width: 0;
         }
     }
 
-    .masthead-nav {
-        margin-top: 1rem;
-        border-bottom: 1px solid var(--rule-strong);
+    .masthead-theme {
+        flex: none;
     }
 
     #nav-links {
@@ -643,6 +648,10 @@ header.site-masthead {
 
         #nav-social {
             justify-content: center;
+        }
+
+        .masthead-nav nav {
+            flex-basis: 100%;
         }
     }
 

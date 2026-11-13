@@ -21,7 +21,6 @@
                 </div>
             </div>
             <div class="masthead-utility">
-                {{ partial "theme-choices.html" (dict "class" "masthead-theme") }}
                 <ul id="nav-social" class="list-unstyled">
                     {{ range .Site.Params.social }}
                         {{ $icon := resources.Get (printf "icons/%s.svg" .icon) }}
@@ -31,14 +30,17 @@
                 </ul>
             </div>
         </div>
-        <nav class="masthead-nav" aria-label="Main navigation">
-            <ul id="nav-links" class="list-unstyled">
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                    {{ $isPage := $currentPage.IsMenuCurrent "main" . }}
-                    <li><a{{ if or $isPage ($currentPage.HasMenuCurrent "main" .) }} class="active"{{ end }} href="{{ .URL }}"{{ if $isPage }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
-        </nav>
+        <div class="masthead-nav">
+            <nav aria-label="Main navigation">
+                <ul id="nav-links" class="list-unstyled">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ $isPage := $currentPage.IsMenuCurrent "main" . }}
+                        <li><a{{ if or $isPage ($currentPage.HasMenuCurrent "main" .) }} class="active"{{ end }} href="{{ .URL }}"{{ if $isPage }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+            {{ partial "theme-choices.html" (dict "class" "masthead-theme") }}
+        </div>
     </div>
 </header>
