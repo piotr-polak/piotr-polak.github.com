@@ -494,16 +494,6 @@ article table {
     font-size: 1rem;
     line-height: 1.65;
 
-    /* Keep running text near 45-75 characters per line; tables, contents panels, and article lists keep the full column */
-    :is(article, .page-lead, .about-page, .home-intro) :is(p, li) {
-        max-width: 60ch;
-    }
-
-    /* Callout paragraphs are inline (theme quote style), so the box itself carries the measure: 60ch plus its padding */
-    :is(article, .page-lead, .about-page, .home-intro) blockquote {
-        max-width: calc(60ch + 2.25rem);
-    }
-
     p {
         margin-bottom: 1em;
     }
