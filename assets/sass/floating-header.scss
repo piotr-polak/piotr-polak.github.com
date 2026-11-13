@@ -1,25 +1,6 @@
-/* Optional frosted scroll header. The ordinary masthead remains the no-JS fallback. */
+/* Solid compact header revealed after the full masthead scrolls away. */
 :root {
-    --glass-bg: rgba(247, 245, 240, 0.42);
-    --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.025) 48%, rgba(255, 255, 255, 0.08));
-    --glass-edge: rgba(255, 255, 255, 0.7);
     scroll-padding-top: var(--floating-header-offset, 6.5rem);
-}
-
-@mixin dark-glass {
-    --glass-bg: rgba(23, 25, 28, 0.5);
-    --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.01) 48%, rgba(255, 255, 255, 0.025));
-    --glass-edge: rgba(255, 255, 255, 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        @include dark-glass;
-    }
-}
-
-:root[data-theme="dark"] {
-    @include dark-glass;
 }
 
 .floating-header {
@@ -29,10 +10,6 @@
     border-top: 3px solid var(--signal);
     background: var(--bg);
     color: var(--fg);
-    box-shadow: inset 0 1px 0 var(--glass-edge), 0 8px 24px rgba(0, 0, 0, 0.1);
-    /* Keep the 760px content frame clear; dissolve the glass into the outer page margins. */
-    -webkit-mask-image: linear-gradient(to right, transparent calc(50% - 500px), #000 calc(50% - 380px), #000 calc(50% + 380px), transparent calc(50% + 500px));
-    mask-image: linear-gradient(to right, transparent calc(50% - 500px), #000 calc(50% - 380px), #000 calc(50% + 380px), transparent calc(50% + 500px));
     transform: translateY(-110%);
     visibility: hidden;
     transition: transform 220ms ease, visibility 220ms;
@@ -57,6 +34,7 @@
         gap: 0 1rem;
         min-height: 60px;
         margin-left: 0.5rem;
+        border-bottom: 1px solid var(--rule-strong);
     }
 
     .floating-name {
@@ -99,7 +77,7 @@
         flex-wrap: nowrap;
 
         button {
-            /* Solid pills keep text and border contrast independent of the content behind the glass. */
+            /* Match the solid header background. */
             background: var(--bg);
         }
     }
@@ -152,26 +130,9 @@
     }
 }
 
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .floating-header {
-        background: var(--glass-sheen), var(--glass-bg);
-        -webkit-backdrop-filter: blur(20px) saturate(160%);
-        backdrop-filter: blur(20px) saturate(160%);
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .floating-header {
         transition: none;
-    }
-}
-
-@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
-    .floating-header {
-        background: var(--bg);
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        box-shadow: none;
     }
 }
 
@@ -187,6 +148,11 @@
 }
 
 @media print {
+    #content > main.container .start-row,
+    #content > main.container .callout {
+        background: none;
+    }
+
     .floating-header {
         display: none !important;
     }
