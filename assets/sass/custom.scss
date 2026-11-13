@@ -652,6 +652,10 @@ header.site-masthead {
     }
 
     @media (max-width: 767.98px) {
+        .masthead-theme {
+            order: -1;
+        }
+
         .masthead-nav {
             border-bottom: 0;
 
