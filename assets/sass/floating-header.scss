@@ -8,6 +8,7 @@
     z-index: 100;
     inset: 0 0 auto;
     border-top: 3px solid var(--signal);
+    border-image: linear-gradient(to right, transparent calc(50% - 500px), var(--signal) calc(50% - 380px), var(--signal) calc(50% + 380px), transparent calc(50% + 500px)) 1;
     background: var(--bg);
     color: var(--fg);
     transform: translateY(-110%);
@@ -58,11 +59,12 @@
             min-height: 60px;
             font-size: 0.875rem;
             font-weight: 600;
-            color: var(--fg);
+            color: var(--link);
             white-space: nowrap;
             text-decoration: none;
 
             &:hover {
+                color: var(--link-hover);
                 box-shadow: inset 0 -3px 0 var(--accent);
             }
 

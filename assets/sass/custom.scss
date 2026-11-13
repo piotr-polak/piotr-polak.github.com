@@ -67,6 +67,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     border-top: 4px solid var(--signal);
+    border-image: linear-gradient(to right, transparent calc(50% - 500px), var(--signal) calc(50% - 380px), var(--signal) calc(50% + 380px), transparent calc(50% + 500px)) 1;
     background-color: var(--bg);
     color: var(--fg);
 }
