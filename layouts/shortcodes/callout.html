@@ -1,0 +1,7 @@
+{{- /* A highlighted note in running text, for example a call to action.
+       Usage: {{< callout title="Get in touch" >}}Markdown text{{< /callout >}}
+       Rendered as a note, not a quotation, so assistive technology does not announce it as quoted text. */ -}}
+<div class="callout" role="note"{{ with .Get "title" }} aria-label="{{ . }}"{{ end }}>
+    {{- with .Get "title" }}<p class="callout-title">{{ . }}</p>{{ end }}
+    {{ .Inner | strings.TrimSpace | .Page.RenderString (dict "display" "block") }}
+</div>

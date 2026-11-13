@@ -20,13 +20,16 @@
                     <p class="masthead-tagline">{{ .Site.Params.header_subtitle | default "Your Creative Subtitle" }}</p>
                 </div>
             </div>
-            <ul id="nav-social" class="list-unstyled">
-                {{ range .Site.Params.social }}
-                    {{ $icon := resources.Get (printf "icons/%s.svg" .icon) }}
-                    {{ if not $icon }}{{ errorf "params.social %q: assets/icons/%s.svg not found" .name .icon }}{{ end }}
-                    <li><a href="{{ .href | safeURL }}"{{ if hasPrefix .href "http" }} target="_blank" rel="noopener"{{ end }}>{{ $icon.Content | strings.TrimSpace | safeHTML }}{{ .name }}</a></li>
-                {{ end }}
-            </ul>
+            <div class="masthead-utility">
+                {{ partial "theme-choices.html" (dict "class" "masthead-theme") }}
+                <ul id="nav-social" class="list-unstyled">
+                    {{ range .Site.Params.social }}
+                        {{ $icon := resources.Get (printf "icons/%s.svg" .icon) }}
+                        {{ if not $icon }}{{ errorf "params.social %q: assets/icons/%s.svg not found" .name .icon }}{{ end }}
+                        <li><a href="{{ .href | safeURL }}"{{ if hasPrefix .href "http" }} target="_blank" rel="noopener"{{ end }}>{{ $icon.Content | strings.TrimSpace | safeHTML }}{{ .name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
         <nav class="masthead-nav" aria-label="Main navigation">
             <ul id="nav-links" class="list-unstyled">

@@ -1,13 +1,7 @@
 <footer class="text-center">
-    {{/* Theme control: shown and driven by the script in head.html, so it stays hidden without JavaScript */}}
-    <div id="theme-switch" role="group" aria-labelledby="theme-switch-label" hidden>
-        <span id="theme-switch-label">Theme</span>
-        {{ range slice (slice "auto" "Auto" "auto") (slice "light" "Light" "sun") (slice "dark" "Dark" "moon") }}
-        <button type="button" data-theme-choice="{{ index . 0 }}" aria-pressed="false">
-            {{- (resources.Get (printf "icons/%s.svg" (index . 2))).Content | strings.TrimSpace | safeHTML }}{{ index . 1 -}}
-        </button>
-        {{ end }}
-    </div>
+    {{/* Divider built like the masthead (content width, container, inner indent) so it lines up with the header rule at every width */}}
+    <div class="footer-rule-frame mx-auto"><div class="container"><div class="footer-rule"></div></div></div>
+    {{ partial "theme-choices.html" (dict "id" "theme-switch" "label" "Theme") }}
     <small class="text-muted">
         {{ printf "&copy; %d Piotr Polak" now.Year | safeHTML }}
         · <a href="/index.xml">RSS feed</a>

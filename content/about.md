@@ -27,9 +27,9 @@ I can help your team to:
 - Plan a practical transition from RED DA requirements to the CRA
 - Deliver a technical talk or webinar on connected-product security and compliance
 
-> **Get in touch**
->
-> If you are preparing a connected product for the CRA, need an independent review of your compliance approach, or are looking for a speaker, [get in touch](mailto:contact@piotrpolak.com) or connect with me on [LinkedIn](https://linkedin.com/in/piotrpolak).
+{{< callout title="Get in touch" >}}
+If you are preparing a connected product for the CRA, need an independent review of your compliance approach, or are looking for a speaker, [get in touch](mailto:contact@piotrpolak.com) or connect with me on [LinkedIn](https://linkedin.com/in/piotrpolak).
+{{< /callout >}}
 
 ## Experience and expertise
 

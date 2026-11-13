@@ -1,11 +1,15 @@
 {{ define "main" }}
-    <div class="pl-sm-2 pt-2">
-        <p class="small text-muted mb-1">Error 404</p>
-        <h1 class="mb-3">Page not found</h1>
-        <p>This link may be outdated, or there may be a typo in the address.</p>
-        <p class="mb-4"><a href="/">Go to the homepage</a>{{ with site.GetPage "/post" }} or <a href="{{ .RelPermalink }}">browse all articles</a>{{ end }}.</p>
+    <div class="pl-sm-2">
+        <div class="page-head">
+            <h1>Page not found</h1>
+            <small class="post-meta text-muted">Error 404</small>
+        </div>
+        <div class="page-lead">
+            <p>This link may be outdated, or there may be a typo in the address.</p>
+        </div>
+        <p><a href="/">Go to the homepage</a>{{ with site.GetPage "/post" }} or <a href="{{ .RelPermalink }}">browse all articles</a>{{ end }}.</p>
 
-        <h2 class="h5"><span class="badge category">Looking for CRA guidance?</span></h2>
+        <h2>Looking for CRA guidance?</h2>
         <div class="start-here">
             {{ with site.GetPage "/cra" }}
             <a class="start-row" href="{{ .RelPermalink }}">
@@ -23,15 +27,8 @@
             {{ end }}
         </div>
 
-        <h2 class="h5"><span class="badge category">Latest articles</span></h2>
-        <ul class="list-unstyled">
-            {{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-                <li class="mb-3">
-                    <time class="d-block small text-muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
-        </ul>
+        <h2>Latest articles</h2>
+        {{ partial "article-entries.html" (dict "pages" (first 3 (where site.RegularPages "Type" "in" site.Params.mainSections)) "level" 3) }}
 
         {{ with site.GetPage "/contact" }}
         <p class="text-muted"><a href="{{ .RelPermalink }}">Report a broken link</a> and include the page address so I can fix it.</p>

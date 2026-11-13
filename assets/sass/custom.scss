@@ -13,6 +13,7 @@
     --badge-fg: #e4e6e9;
     --rule: #33383e;
     --rule-strong: #454b52;
+    --control-border: #6b737c;
     --surface: #33383e;
     --hr: #f0b44c;
     --signal: #f0b44c;
@@ -37,6 +38,7 @@
     --badge-fg: #f5f5f5;
     --rule: #dee2e6;
     --rule-strong: #ced4da;
+    --control-border: #7d8791;
     --surface: #eef1f3;
     --hr: #b87a00;
     --signal: #b87a00;
@@ -58,17 +60,15 @@
     @include dark-palette;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--fg);
-}
-
-/* Footer: clear space above it, and at the bottom of the window on short pages
-   (replaces the theme's min-height, which assumed a fixed footer height) */
+/* Page: background and text colours; footer kept at the bottom of short windows (replaces the theme's
+   fixed-height min-height); an amber strip along the top of every page */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    border-top: 4px solid var(--signal);
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
 #content {
@@ -76,17 +76,20 @@ body {
     min-height: 0;
 }
 
-/* A divider like the header's, with room above it and below the last footer line */
+/* A divider like the header's, aligned with the content column, with room above it and below the last footer line.
+   The footer markup mirrors the masthead: a 760px frame, a Bootstrap container, and the 0.5rem inner indent from 576px. */
 body > footer {
     margin-top: 3.5rem;
     padding-bottom: 2.5rem;
 
-    &::before {
-        content: "";
-        display: block;
-        max-width: 650px;
+    .footer-rule-frame {
+        max-width: 760px;
+        margin-bottom: 1.75rem;
+    }
+
+    .footer-rule {
         height: 2px;
-        margin: 0 auto 1.75rem;
+        margin-left: 0.5rem;
         background-image: linear-gradient(to right, transparent, var(--hr) 20%, var(--hr) 80%, transparent);
     }
 
@@ -94,8 +97,12 @@ body > footer {
         margin-top: 2.5rem;
         padding-bottom: 2rem;
 
-        &::before {
+        .footer-rule-frame {
             margin-bottom: 1.5rem;
+        }
+
+        .footer-rule {
+            margin-left: 0;
         }
     }
 }
@@ -104,27 +111,11 @@ a:hover {
     color: var(--link-hover);
 }
 
-.category {
-    color: var(--badge-fg);
-    background-color: var(--badge);
-}
-
-/* Home page content follows the About page's wider measure and editorial hierarchy */
+/* Home page: a larger opening paragraph */
 .home-intro {
     > p:first-of-type {
-        max-width: 48rem;
         font-size: 1.25rem;
         line-height: 1.45;
-    }
-
-    > h2 {
-        margin-top: 2.5rem;
-        padding-top: 1rem;
-        border-top: 2px solid var(--rule);
-    }
-
-    > h2 + .start-here {
-        border-top: 0;
     }
 
     /* Keep the original home-card surface without changing cards on other pages. */
@@ -135,12 +126,6 @@ a:hover {
 
 .home-latest {
     padding-top: 0 !important;
-
-    h2 {
-        margin-top: 0.5rem;
-        padding-top: 1rem;
-        border-top: 2px solid var(--rule);
-    }
 }
 
 /* Home page "Start here": the CRA guide and the standards tracker as index rows with one line of facts */
@@ -246,17 +231,9 @@ hr {
     background-image: linear-gradient(to right, transparent, var(--hr) 20%, var(--hr) 80%, transparent);
 }
 
+/* Header portrait: a navy ring (light blue in dark mode), amber on the home page and on hover */
 #home-image {
     border-color: var(--avatar-ring);
-}
-
-/* Branding: an amber strip along the top of every page and an avatar ring (below) */
-body {
-    border-top: 4px solid var(--signal);
-}
-
-/* The avatar ring is navy (light blue in dark mode), and amber on the home page and on hover */
-#home-image {
     box-shadow: 0 0 0 2px var(--accent), 0 10px 7px -10px rgba(0, 0, 0, 0.6);
     transition: box-shadow 0.15s ease;
 }
@@ -274,16 +251,6 @@ body {
     border-radius: 0.5rem;
 }
 
-header .h2 {
-    font-family: inherit;
-    font-weight: 700;
-    letter-spacing: normal;
-
-    a, a:hover {
-        color: inherit;
-    }
-}
-
 a {
     color: var(--link);
 }
@@ -292,48 +259,16 @@ a {
     color: var(--muted) !important;
 }
 
-#content > main.container {
-    h1, h2, h3 {
-        font-family: inherit;
-        font-weight: 700;
-        letter-spacing: normal;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-        line-height: 1.3;
-    }
-
-    h2:not(.h5) {
-        margin-top: 2.5rem;
-        margin-bottom: 0.75rem;
-        padding-top: 1rem;
-        border-top: 2px solid var(--rule);
-        font-size: 1.375rem;
-        line-height: 1.3;
-    }
-
-    h3 {
-        margin-top: 1.25rem;
-        margin-bottom: 0.4rem;
-        font-size: 1.125rem;
-        line-height: 1.4;
-    }
-}
-
 #content > main.container .about-page {
     max-width: 760px;
 
     > p:first-of-type {
-        max-width: 48rem;
         font-size: 1.25rem;
         line-height: 1.45;
     }
 
     h2:not(.h5) {
         margin-top: 2.5rem;
-        padding-top: 1rem;
-        border-top: 2px solid var(--rule);
     }
 
     h3 {
@@ -346,26 +281,23 @@ a {
     li + li {
         margin-top: 0.42rem;
     }
+}
 
-    blockquote {
-        max-width: 760px;
-        margin: 1.3rem 0;
-        padding: 0.875rem 1.125rem;
-        border-left: 4px solid var(--hr);
-        background: var(--rule);
+/* Callout (the callout shortcode): a highlighted note in running text, for example a call to action */
+#content > main.container .callout {
+    margin: 1.3rem 0;
+    padding: 0.875rem 1.125rem;
+    border-left: 4px solid var(--hr);
+    background: var(--rule);
 
-        &::before {
-            content: none;
-        }
+    .callout-title {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+    }
 
-        strong {
-            display: block;
-            color: var(--accent);
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
+    p:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -386,12 +318,10 @@ article table {
     }
 }
 
-/* Labelled GitHub, LinkedIn, and email links under the main menu */
+/* Labelled GitHub, LinkedIn, and email links in the masthead */
 #nav-social {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem 1.25rem;
-    margin-top: 0.75rem;
 
     a {
         display: inline-flex;
@@ -419,23 +349,15 @@ article table {
         height: 1rem;
         fill: currentColor;
     }
-
-    /* The header is centred below Bootstrap's sm breakpoint */
-    @media (max-width: 575.98px) {
-        justify-content: center;
-    }
 }
 
-/* Main menu: 15px semibold links (14px on phones); an amber bar under the current page, a navy one on hover */
+/* Main menu: 16px semibold links (14.4px on phones); an amber bar under the current page, a navy one on hover */
 #nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 0.25rem;
     left: 0;
-    margin-left: -0.5rem;
 
     a {
-        padding: 0.55rem 0.65rem;
         border-radius: 0;
         font-size: 1rem;
         font-weight: 600;
@@ -459,33 +381,10 @@ article table {
         }
     }
 
-    /* The header is centred below Bootstrap's sm breakpoint */
     @media (max-width: 575.98px) {
-        justify-content: center;
-        margin-left: 0;
-        gap: 0;
-
         a {
-            padding: 0.5rem 0.5rem;
             font-size: 0.9rem;
         }
-    }
-}
-
-/* Desktop header: avatar on the article's left edge, slightly smaller, larger subtitle */
-@media (min-width: 576px) {
-    #home-image {
-        width: 104px;
-        height: 104px;
-        border-width: 4px;
-    }
-
-    header p.text-muted {
-        font-size: 1rem;
-    }
-
-    header .h2 {
-        font-size: 1.625rem;
     }
 }
 
@@ -493,6 +392,12 @@ article table {
 #content > main.container {
     font-size: 1rem;
     line-height: 1.65;
+
+    h1, h2, h3 {
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: normal;
+    }
 
     p {
         margin-bottom: 1em;
@@ -510,6 +415,18 @@ article table {
 
     h2:not(.h5) {
         margin-top: 2.25rem;
+        margin-bottom: 0.75rem;
+        padding-top: 1rem;
+        border-top: 2px solid var(--rule);
+        font-size: 1.375rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        margin-top: 1.25rem;
+        margin-bottom: 0.4rem;
+        font-size: 1.125rem;
+        line-height: 1.4;
     }
 
     ul:not(.list-unstyled),
@@ -606,9 +523,11 @@ article table {
 
 /* Full masthead: identity and utility links above a content-aligned navigation row */
 header.site-masthead {
-    margin: 2rem 0 1.75rem;
+    /* auto side margins keep Bootstrap's container centred, so the masthead lines up with the content below at every width */
+    margin: 2rem auto 1.75rem;
 
     .masthead-inner {
+        position: relative;
         margin-left: 0.5rem;
     }
 
@@ -663,11 +582,28 @@ header.site-masthead {
         line-height: 1.45;
     }
 
-    #nav-social {
+    /* Right-hand column: the social links, centred on the portrait. From 700px the theme switch is pinned to the
+       top-right corner above them, close to the top of the page; on narrower screens it sits centred above the links. */
+    .masthead-utility {
         flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    #nav-social {
         left: 0;
         margin: 0;
         gap: 0.75rem;
+    }
+
+    @media (min-width: 700px) {
+        .masthead-theme {
+            position: absolute;
+            top: -1.25rem;
+            right: 0;
+        }
     }
 
     .masthead-nav {
@@ -701,6 +637,10 @@ header.site-masthead {
             gap: 0.75rem;
         }
 
+        .masthead-utility {
+            align-items: center;
+        }
+
         #nav-social {
             justify-content: center;
         }
@@ -731,51 +671,21 @@ header.site-masthead {
     }
 }
 
-/* Compact header on phones so articles start higher on the first screen */
+/* Phones: less space above and below the masthead so articles start higher on the first screen */
 @media (max-width: 575.98px) {
     header.container {
         margin-top: 0.75rem !important;
         margin-bottom: 0.75rem !important;
-
-        hr {
-            margin: 0.75rem 0 0;
-        }
-    }
-
-    #home-image {
-        width: 64px;
-        height: 64px;
-        border-width: 3px;
-    }
-
-    header .h2 {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.15rem !important;
-        font-size: 1.5rem;
-    }
-
-    header p.text-muted {
-        margin-bottom: 0.25rem !important;
-        font-size: 0.9rem;
-    }
-
-    #nav-links {
-        margin-bottom: 0 !important;
-    }
-
-    #nav-social {
-        margin-bottom: 0;
     }
 }
 
-/* Footer theme control: Auto / Light / Dark, the current one bold with an accent border */
-#theme-switch {
+/* Theme switch (partial theme-choices.html): Auto / Light / Dark pills, the current one bold with an accent border.
+   Used in the masthead and the footer. */
+.theme-choices {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     gap: 0.25rem;
-    margin-bottom: 0.5rem;
     color: var(--muted);
     font-size: 0.8125rem;
 
@@ -783,7 +693,7 @@ header.site-masthead {
         display: none;
     }
 
-    > span {
+    .theme-choices-label {
         margin-right: 0.35rem;
     }
 
@@ -793,7 +703,7 @@ header.site-masthead {
         gap: 0.35rem;
         min-height: 1.75rem;
         padding: 0.15rem 0.65rem;
-        border: 1px solid var(--rule-strong);
+        border: 1px solid var(--control-border);
         border-radius: 999px;
         background: none;
         color: var(--muted);
@@ -829,11 +739,17 @@ header.site-masthead {
     }
 }
 
+/* Footer placement: centred above the copyright line */
+#theme-switch {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
 /* CRA standards tracker: stage pills, summary row, and tables that stack on phones */
 .standards-page {
     .tracker-help {
         padding: 0.75rem 1rem;
-        border: 1px solid var(--rule-strong);
+        border: 1px solid var(--control-border);
 
         + .tracker-help {
             margin-top: 0.5rem;
@@ -1079,7 +995,7 @@ header.site-masthead {
 
     .masthead-nav,
     #nav-social,
-    #theme-switch {
+    .theme-choices {
         display: none !important;
     }
 }

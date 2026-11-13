@@ -1,0 +1,13 @@
+{{- /* Auto / Light / Dark theme buttons, used in the masthead and the footer.
+       Rendered hidden: the theme script in head.html shows every group and marks the current choice,
+       so the control never appears without JavaScript.
+       Parameters (dict): "id" (optional element id), "label" (optional visible label; otherwise aria-label "Theme"), "class". */ -}}
+<div{{ with .id }} id="{{ . }}"{{ end }} class="theme-choices{{ with .class }} {{ . }}{{ end }}" role="group"
+    {{- if .label }} aria-labelledby="{{ .id }}-label"{{ else }} aria-label="Theme"{{ end }} data-theme-group hidden>
+    {{- with .label }}<span id="{{ $.id }}-label" class="theme-choices-label">{{ . }}</span>{{ end }}
+    {{- range slice (slice "auto" "Auto" "auto") (slice "light" "Light" "sun") (slice "dark" "Dark" "moon") }}
+    <button type="button" data-theme-choice="{{ index . 0 }}" aria-pressed="false">
+        {{- (resources.Get (printf "icons/%s.svg" (index . 2))).Content | strings.TrimSpace | safeHTML }}{{ index . 1 -}}
+    </button>
+    {{- end }}
+</div>

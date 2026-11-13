@@ -40,8 +40,9 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#17191c" media="(prefers-color-scheme: dark)">
-    {{/* Theme control in the footer: Auto (follow the system, the default), Light or Dark.
-         Runs before the stylesheets so a saved choice applies without a flash. */}}
+    {{/* Theme controls: the Auto / Light / Dark groups in the masthead and the footer (partial theme-choices.html).
+         Auto follows the system and is the default. Runs before the stylesheets so a saved choice applies without a
+         flash. The groups start hidden and are shown here, so they never appear without JavaScript. */}}
     <script>
     (() => {
         const root = document.documentElement;
@@ -50,10 +51,10 @@
         const sync = () => {
             const s = root.dataset.theme || "auto";
             metas.forEach((m, i) => (m.content = s === "auto" ? [lightBar, darkBar][i] : s === "dark" ? darkBar : lightBar));
-            const sw = document.getElementById("theme-switch");
-            if (!sw) return;
-            sw.hidden = false;
-            sw.querySelectorAll("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themeChoice === s));
+            document.querySelectorAll("[data-theme-group]").forEach((group) => {
+                group.hidden = false;
+                group.querySelectorAll("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themeChoice === s));
+            });
         };
         try {
             const saved = localStorage.getItem("theme");
@@ -62,7 +63,7 @@
         sync();
         document.addEventListener("DOMContentLoaded", sync);
         document.addEventListener("click", (e) => {
-            const s = e.target.closest("#theme-switch [data-theme-choice]")?.dataset.themeChoice;
+            const s = e.target.closest("[data-theme-group] [data-theme-choice]")?.dataset.themeChoice;
             if (!s) return;
             try {
                 if (s === "auto") localStorage.removeItem("theme");
