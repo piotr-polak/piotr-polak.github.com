@@ -89,5 +89,10 @@
     <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
     {{ end }}
 
+    {{ if .Site.Params.floatingHeader }}
+    {{ $floating := resources.Get "sass/floating-header.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $floating.RelPermalink }}">
+    {{ end }}
+
     {{ template "_internal/google_analytics.html" . }}
 </head>

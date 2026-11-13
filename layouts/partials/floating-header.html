@@ -1,0 +1,22 @@
+{{/* Compact scroll header, enabled by params.floatingHeader. */}}
+<div class="floating-header" hidden inert>
+    <div class="floating-frame mx-auto">
+        <div class="container">
+            <div class="floating-inner">
+                <a class="floating-name" href="/">{{ .Site.Params.header_title }}</a>
+                <nav aria-label="Quick navigation">
+                    <ul class="floating-links list-unstyled">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                            {{ $isPage := $currentPage.IsMenuCurrent "main" . }}
+                            <li><a{{ if or $isPage ($currentPage.HasMenuCurrent "main" .) }} class="active"{{ end }} href="{{ .URL }}"{{ if $isPage }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+                </nav>
+                {{ partial "theme-choices.html" (dict "class" "floating-theme") }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ $script := resources.Get "js/floating-header.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" defer></script>
