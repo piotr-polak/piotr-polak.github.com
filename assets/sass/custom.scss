@@ -603,7 +603,6 @@ header.site-masthead {
         justify-content: flex-end;
         gap: 0.25rem 1rem;
         margin-top: 1rem;
-        padding-bottom: 0.25rem;
         border-bottom: 1px solid var(--rule-strong);
 
         nav {
@@ -649,9 +648,16 @@ header.site-masthead {
         #nav-social {
             justify-content: center;
         }
+    }
 
-        .masthead-nav nav {
-            flex-basis: 100%;
+    @media (max-width: 767.98px) {
+        .masthead-nav {
+            border-bottom: 0;
+
+            nav {
+                flex-basis: 100%;
+                border-bottom: 1px solid var(--rule-strong);
+            }
         }
     }
 
