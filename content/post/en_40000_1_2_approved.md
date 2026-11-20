@@ -2,7 +2,7 @@
 title = "EN 40000-1-2: CRA Process Standard Approved"
 author = ["Piotr Polak"]
 date = 2026-10-02T00:00:00+02:00
-lastmod = 2026-11-11
+lastmod = 2026-11-19
 categories = ["Regulations"]
 draft = false
 description = "EN 40000-1-2, the horizontal Cyber Resilience Act process standard covering cybersecurity principles, product risk management, and lifecycle activities, has been approved by the CEN-CENELEC formal vote with 100 percent of votes in favor."
@@ -11,6 +11,8 @@ description = "EN 40000-1-2, the horizontal Cyber Resilience Act process standar
 [EN 40000-1-2](<https://standards.cencenelec.eu/ords/f?p=CEN:110:::::FSP_PROJECT,FSP_ORG_ID:81335,2307986&cs=1D72BA048927BF4E6076BA309587EA01A>),
 a horizontal standard supporting the Cyber Resilience Act,
 has been approved in the CEN-CENELEC formal vote with 100 percent of the votes in favor.
+
+*Update, November 19, 2026: EN 40000-1-2 has now been published, together with EN 40000-1-1; see [EN 40000-1-1 and EN 40000-1-2 Published]({{< relref "post/en_40000_1_1_and_1_2_published" >}}).*
 
 *Status checked on November 10, 2026: the CEN-CENELEC project page lists the standard as approved, with a date of availability of November 18, 2026. That is the scheduled distribution date of the definitive text, not its national implementation deadline.*
 
