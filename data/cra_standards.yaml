@@ -25,6 +25,9 @@ stages:
 # Recent changes: one entry per re-check, newest first; the page shows the latest three.
 # Name what moved and to which stage, with the event date where the source gives one.
 changes:
+  - date: "2026-11-19"
+    items:
+      - CEN and CENELEC [announced](https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-11-19-cra-standards-en-40000-1-1-and-en-40000-1-2/) the publication of EN 40000-1-1 and EN 40000-1-2 on November 19, 2026. Both remain **Approved** (no citation in the Official Journal is expected).
   - date: "2026-11-11"
     items:
       - EN 40000-1-1 and EN 40000-1-2 were ratified on November 2, 2026, and are now **Approved**. Publication is planned for November 2026.
@@ -41,14 +44,14 @@ groups:
         item: "–"
         oj: false
         stage: approved
-        note: Ratified November 2, 2026; publication planned for November 2026. Supporting standard, not requested by M/606.
+        note: Ratified November 2, 2026; published November 2026. Supporting standard, not requested by M/606.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:82349,25&cs=16635E5B87CB4221D8FFC1A74EC94EC6B
       - ref: EN 40000-1-2
         title: Principles, product risk management and lifecycle activities
         item: "#1"
         oj: false
         stage: approved
-        note: Ratified November 2, 2026; publication planned for November 2026.
+        note: Ratified November 2, 2026; published November 2026.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:81335,25&cs=12AE5EC727F6FE08205C3342F485FB073
       - ref: prEN 40000-1-3
         title: Vulnerability handling
