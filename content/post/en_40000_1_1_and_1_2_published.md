@@ -3,7 +3,7 @@ title = "EN 40000-1-1 and EN 40000-1-2 Published"
 author = ["Piotr Polak"]
 date = 2026-11-19T00:00:00+01:00
 categories = ["Regulations"]
-draft = true
+draft = false
 description = "CEN and CENELEC have published the first two standards of the EN 40000 series supporting the Cyber Resilience Act: EN 40000-1-1 on cybersecurity vocabulary and EN 40000-1-2 on principles, product risk management and lifecycle activities."
 +++
 
