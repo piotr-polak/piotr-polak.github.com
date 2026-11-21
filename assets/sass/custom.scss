@@ -22,7 +22,7 @@
     --figure-panel: #f5f5f5;
     --figure-pad: 0.75rem;
     --stage-enquiry: #e0b35a;
-    --stage-approved: #7cc48f;
+    --stage-published: #7cc48f;
 }
 
 :root {
@@ -47,7 +47,7 @@
     --figure-panel: transparent;
     --figure-pad: 0;
     --stage-enquiry: #8a5a00;
-    --stage-approved: #1e6b34;
+    --stage-published: #1e6b34;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -223,7 +223,7 @@ a:hover {
     .bar-drafting { background-color: var(--muted); }
     .bar-enquiry { background-color: var(--stage-enquiry); }
     .bar-approval { background-color: var(--link); }
-    .bar-approved { background-color: var(--stage-approved); }
+    .bar-published { background-color: var(--stage-published); }
     .bar-cited { background-color: var(--fg); }
 }
 
@@ -814,7 +814,7 @@ header.site-masthead {
     .stage-drafting { color: var(--muted); }
     .stage-enquiry { color: var(--stage-enquiry); }
     .stage-approval { color: var(--link); }
-    .stage-approved { color: var(--stage-approved); }
+    .stage-published { color: var(--stage-published); }
     .stage-cited { color: var(--fg); }
 
     /* Quieter than the stage pills: a filled grey label under the reference */

@@ -1,5 +1,5 @@
 # CRA standards tracker (content/cra-standards.md). Edit this file to update the page.
-# stage: drafting | enquiry | approval | approved | cited
+# stage: drafting | enquiry | approval | published | cited
 # item: line in standardization request M/606 (Commission Implementing Decision C(2025) 618)
 # oj: false when the CEN-CENELEC project page or the committee says no citation in the Official Journal is expected
 as_of: "2026-11-11"
@@ -14,12 +14,12 @@ stages:
     desc: The draft is out for public enquiry, where national standards bodies comment on it, or the comments are being resolved.
   approval:
     label: Approval
-    desc: The draft is in its final approval step. In CEN-CENELEC this is the formal vote; ETSI runs a combined enquiry and vote, followed by final approval.
-  approved:
-    label: Approved
-    desc: The standards body has approved the standard and it is published or awaiting publication. Until it is cited in the Official Journal, it gives no presumption of conformity.
+    desc: The draft is in its final approval step. In CEN-CENELEC this is the formal vote; ETSI runs a combined enquiry and vote, followed by final approval. A standard that has been approved but is not yet published stays in this stage.
+  published:
+    label: Published
+    desc: The standards body has published the standard, and it is available from the national standards bodies. Until it is cited in the Official Journal, it gives no presumption of conformity.
   cited:
-    label: Cited in OJ
+    label: Cited in the OJ
     desc: The reference is published in the Official Journal of the EU. Applying the standard gives a presumption of conformity with the requirements it covers.
 
 # Recent changes: one entry per re-check, newest first; the page shows the latest three.
@@ -27,10 +27,10 @@ stages:
 changes:
   - date: "2026-11-19"
     items:
-      - CEN and CENELEC [announced](https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-11-19-cra-standards-en-40000-1-1-and-en-40000-1-2/) the publication of EN 40000-1-1 and EN 40000-1-2 on November 19, 2026. Both remain **Approved** (no citation in the Official Journal is expected).
+      - CEN and CENELEC [announced](https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-11-19-cra-standards-en-40000-1-1-and-en-40000-1-2/) the publication of EN 40000-1-1 and EN 40000-1-2 on November 19, 2026. Both are now **Published**; no citation in the Official Journal is expected for either.
   - date: "2026-11-11"
     items:
-      - EN 40000-1-1 and EN 40000-1-2 were ratified on November 2, 2026, and are now **Approved**. Publication is planned for November 2026.
+      - EN 40000-1-1 and EN 40000-1-2 were ratified on November 2, 2026, after their formal vote. Publication is planned for November 2026.
       - prEN 40000-1-3 has been submitted for formal vote and is now in **Approval**.
       - ETSI closed the enquiry and vote for EN 304 625 on November 2 and for EN 304 617, 620, 621, 622 and 626 on November 5, 2026. They are now in **Approval** while comments are resolved.
 
@@ -43,14 +43,14 @@ groups:
         title: Vocabulary
         item: "–"
         oj: false
-        stage: approved
+        stage: published
         note: Ratified November 2, 2026; published November 2026. Supporting standard, not requested by M/606.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:82349,25&cs=16635E5B87CB4221D8FFC1A74EC94EC6B
       - ref: EN 40000-1-2
         title: Principles, product risk management and lifecycle activities
         item: "#1"
         oj: false
-        stage: approved
+        stage: published
         note: Ratified November 2, 2026; published November 2026.
         url: https://standards.cencenelec.eu/ords/f?p=205:110:::::FSP_PROJECT,FSP_LANG_ID:81335,25&cs=12AE5EC727F6FE08205C3342F485FB073
       - ref: prEN 40000-1-3

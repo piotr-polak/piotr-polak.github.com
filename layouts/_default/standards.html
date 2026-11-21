@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ $data := site.Data.cra_standards }}
-    {{ $order := slice "drafting" "enquiry" "approval" "approved" "cited" }}
+    {{ $order := slice "drafting" "enquiry" "approval" "published" "cited" }}
     {{ $all := slice }}
     {{ range $data.groups }}{{ $all = $all | append .standards }}{{ end }}
     {{ $cited := len (where $all "stage" "cited") }}

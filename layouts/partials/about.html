@@ -21,7 +21,7 @@
             {{- $stages = merge $stages (dict .stage (add (index $stages .stage | default 0) 1)) }}
         {{- end }}
     {{- end }}
-    {{- $approved := index $stages "approved" | default 0 }}
+    {{- $published := index $stages "published" | default 0 }}
     {{- $cited := index $stages "cited" | default 0 }}
     <h2>Start here</h2>
     <div class="start-here">
@@ -40,14 +40,14 @@
             <span class="start-desc">Where all {{ $count }} CRA standards stand, from first draft to citation in the Official Journal.</span>
             <span class="start-facts">
                 <span class="stage-bar" aria-hidden="true">
-                    {{- range $stage := slice "drafting" "enquiry" "approval" "approved" "cited" }}
+                    {{- range $stage := slice "drafting" "enquiry" "approval" "published" "cited" }}
                         {{- with index $stages $stage }}<i class="bar-{{ $stage }}" style="flex: {{ . }}"></i>{{ end }}
                     {{- end -}}
                 </span>
                 {{- if eq $cited 0 }}
-                <span>{{ $approved }} approved, <strong>none cited in the OJ yet</strong></span>
+                <span>{{ $published }} published, <strong>none cited in the OJ yet</strong></span>
                 {{- else }}
-                <span>{{ $approved }} approved, <strong>{{ $cited }} cited in the OJ</strong></span>
+                <span>{{ $published }} published, <strong>{{ $cited }} cited in the OJ</strong></span>
                 {{- end }}
             </span>
             <span class="start-arrow" aria-hidden="true">→</span>
