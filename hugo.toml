@@ -62,6 +62,7 @@ copyright = "© 2026 Piotr Polak"
   share_title = "Making sense of EU cybersecurity regulation" # Title on the home page's share card
 # home_image = "/images/avatar.png"          # Path to header image starting from the static directory (optional)
   home_image = "/avatar.png"                 # Path to header image starting from the static directory (optional)
+  umamiWebsiteID = "5e54af92-f7ba-4211-bb5c-5dcf2dcaf532" # Umami Cloud website ID (EU region); empty disables the tracker
   recent_posts = 5                           # Max amount of recent posts to show
   mainSections = ["posts", "post", "blog"]   # Main sections to include in recent posts
   articleListHiddenCategories = ["Regulations"] # Categories too common to label on the Articles page
